@@ -2,7 +2,7 @@
 
 This project uses two other GitHub Projects:
 
-Sploregs GOAP Implementation
+Sploregs GOAP Implementation (included in this Project)
 https://github.com/sploreg/goap
 
 ML-Agents from Unity-Technologies in Version v0.4
