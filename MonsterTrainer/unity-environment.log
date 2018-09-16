@@ -1,0 +1,3466 @@
+20.08.2018 23:13:52
+ 
+Log
+aBomb(-0,5, 2,8, 13,5)
+UnityEngine.Debug:Log(Object)
+Bomb:Start() (at Assets/Scripts/Bomb.cs:22)
+
+Log
+mBomb(-0,5, 2,8, -13,5)
+UnityEngine.Debug:Log(Object)
+Bomb:Start() (at Assets/Scripts/Bomb.cs:22)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:ForcedFullReset() (at Assets/ML-Agents/Scripts/Academy.cs:505)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:556)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areasouth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:35)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:ForcedFullReset() (at Assets/ML-Agents/Scripts/Academy.cs:505)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:556)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+areasouth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areasouth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:35)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForDying -5f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForDying() (at Assets/Scripts/ML/MMonsterAgent.cs:142)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:57)
+
+Log
+Dead!
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:OnCollisionEnter(Collision) (at Assets/Scripts/ML/MMonsterAgent.cs:59)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areasouth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areasouth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:35)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+areanorth changeAreaToTeamM
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:100)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+RewardAgentForConqueringArea 1f mMonster
+UnityEngine.Debug:Log(Object)
+MMonsterAgent:RewardAgentForConqueringArea() (at Assets/Scripts/ML/MMonsterAgent.cs:118)
+AreaController:changeAreaToTeamM(GameObject) (at Assets/Scripts/AreaController.cs:110)
+AreaController:OnTriggerStay(Collider) (at Assets/Scripts/AreaController.cs:58)
+
+Log
+areanorth changeAreaToNeutral
+UnityEngine.Debug:Log(Object)
+AreaController:changeAreaToNeutral() (at Assets/Scripts/AreaController.cs:87)
+AreaController:ResetArea() (at Assets/Scripts/AreaController.cs:35)
+MasterGameAreaController:ResetAllAreas() (at Assets/Scripts/MasterGameAreaController.cs:32)
+MonsterTrainerAcademy:AcademyReset() (at Assets/Scripts/ML/MonsterTrainerAcademy.cs:21)
+MLAgents.Academy:EnvironmentReset() (at Assets/ML-Agents/Scripts/Academy.cs:596)
+MLAgents.Academy:EnvironmentStep() (at Assets/ML-Agents/Scripts/Academy.cs:571)
+MLAgents.Academy:FixedUpdate() (at Assets/ML-Agents/Scripts/Academy.cs:604)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Log
+Hit! ArenaBase (UnityEngine.GameObject)
+UnityEngine.Debug:Log(Object)
+MonsterHead:OnTriggerEnter(Collider) (at Assets/Scripts/MonsterHead.cs:17)
+
+Warning
+Assets/Scripts/AI/GOAP/GoapAction.cs(7,16): warning CS0108: `GoapAction.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
+
+Warning
+Assets/Scripts/AI/ConquerNorthAreaAction.cs(10,11): warning CS0414: The private field `ConquerNorthAreaAction.startTime' is assigned but its value is never used
+
