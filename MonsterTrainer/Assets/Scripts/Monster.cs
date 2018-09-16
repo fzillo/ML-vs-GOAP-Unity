@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
+    public TeamController tControler;
 
-    //TODO set isAlive true on reset
+    public bool isAlive;
+    public bool hasBomb;
 
     GameParameters gParameters;
 
     Rigidbody monsterRB;
 
-    public bool isAlive;
-    public bool hasBomb;
+
 
     void Start()
     {
@@ -74,8 +75,7 @@ public class Monster : MonoBehaviour
     public void GetDamaged()
     {
         Debug.Log(this.gameObject.name + " got damaged!");
-        isAlive = false;
-        this.gameObject.SetActive(false);
+        DieAndRespawn();
     }
 
     public void GetKnockedBack(Vector3 vect)
@@ -84,6 +84,7 @@ public class Monster : MonoBehaviour
 
         monsterRB.AddForce(vect * gParameters.knockBackMultiplier, ForceMode.Impulse);
         Debug.Log(this.gameObject.name + " got knocked back!");
+        waitForOneSecond();
     }
 
     public bool HasBomb()
@@ -96,4 +97,29 @@ public class Monster : MonoBehaviour
         hasBomb = active;
     }
 
+    public void DieAndRespawn()
+    {
+        isAlive = false;
+        //TODO die after knockback
+        this.gameObject.SetActive(false);
+        waitForRespawn();
+        tControler.RespawnMonster(this);
+        this.gameObject.SetActive(true);
+    }
+
+    IEnumerator waitForOneSecond()
+    {
+        yield return new WaitForSeconds(gParameters.respawnTime);
+    }
+
+    IEnumerator waitForRespawn()
+    {
+        yield return new WaitForSeconds(gParameters.respawnTime);
+    }
+
+    public void Reset()
+    {
+        hasBomb = false;
+        isAlive = true;
+    }
 }

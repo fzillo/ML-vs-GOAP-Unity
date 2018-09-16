@@ -12,12 +12,12 @@ public class MonsterTrainerAcademy : Academy
     {
         gAreaController = FindObjectOfType<MasterGameAreaController>();
         startPosGenerator = FindObjectOfType<StartPositionGenerator>();
-        startPosGenerator.AssignRandomStartPositionsForMonsters();
+        startPosGenerator.AssignRandomStartPositionsForAllMonsters();
     }
 
     public override void AcademyReset()
     {
-        startPosGenerator.AssignRandomStartPositionsForMonsters();
+        startPosGenerator.AssignRandomStartPositionsForAllMonsters();
         gAreaController.ResetAllAreas();
     }
 

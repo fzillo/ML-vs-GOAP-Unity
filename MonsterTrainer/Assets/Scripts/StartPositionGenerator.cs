@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class StartPositionGenerator : MonoBehaviour
 {
-    public List<GameObject> monstersTeamM;
-    public List<GameObject> monstersTeamA;
+    List<GameObject> monsterGameobjectsTeamM;
+    List<GameObject> monsterGameobjectsTeamA;
 
     List<Vector3> startPositionsTeamM = new List<Vector3>();
     List<Vector3> startPositionsTeamA = new List<Vector3>();
@@ -22,16 +22,16 @@ public class StartPositionGenerator : MonoBehaviour
 
     void Start()
     {
-        //monstersTeamM = new List<GameObject>(teamMController.teamMonster);
+        monsterGameobjectsTeamM = new List<GameObject>(teamMController.teamMonster);
         //Debug.Log(monstersTeamM.Count);
-        //monstersTeamA = teamAControl.teamMonster;
+        monsterGameobjectsTeamA = new List<GameObject>(teamAControl.teamMonster);
     }
 
-    public void AssignRandomStartPositionsForMonsters()
+    public void AssignRandomStartPositionsForAllMonsters()
     {
         RandomizePositions();
 
-        foreach (GameObject monsterM in monstersTeamM)
+        foreach (GameObject monsterM in monsterGameobjectsTeamM)
         {
             if (listIndexTeamM < startPositionsTeamM.Count)
             {
@@ -45,10 +45,9 @@ public class StartPositionGenerator : MonoBehaviour
                     rb.angularVelocity = Vector3.zero;
                 }
             }
-            //TODO else Exception?
         }
 
-        foreach (GameObject monsterA in monstersTeamA)
+        foreach (GameObject monsterA in monsterGameobjectsTeamA)
         {
             if (listIndexTeamA < startPositionsTeamA.Count)
             {
@@ -62,7 +61,6 @@ public class StartPositionGenerator : MonoBehaviour
                     rb.angularVelocity = Vector3.zero;
                 }
             }
-            //TODO else Exception?
         }
     }
 
@@ -73,11 +71,11 @@ public class StartPositionGenerator : MonoBehaviour
         //only once at start!
         if (!startPositionsInitialized)
         {
-            foreach (GameObject monsterM in monstersTeamM)
+            foreach (GameObject monsterM in monsterGameobjectsTeamM)
             {
                 startPositionsTeamM.Add(monsterM.transform.position);
             }
-            foreach (GameObject monsterA in monstersTeamA)
+            foreach (GameObject monsterA in monsterGameobjectsTeamA)
             {
                 startPositionsTeamA.Add(monsterA.transform.position);
             }
@@ -108,4 +106,20 @@ public class StartPositionGenerator : MonoBehaviour
         return listToShuffle;
     }
 
+    public void AssignRandomStartPositionsForMonster(Monster monsterEntity)
+    {
+        Rigidbody monsterRB = monsterEntity.GetComponent<Rigidbody>();
+        monsterRB.velocity = Vector3.zero;
+        monsterRB.angularVelocity = Vector3.zero;
+        if (monsterEntity.tag == "mMonster")
+        {
+            Integer randomIndex = Random.RangeInt(0, startPositionsTeamM.Count - 1);
+            monsterRB.transform.position = startPositionsTeamM[randomIndex];
+        }
+        else if (monsterEntity.tag == "aMonster")
+        {
+            Integer randomIndex = Random.RangeInt(0, startPositionsTeamA.Count - 1);
+            monsterRB.transform.position = startPositionsTeamA[randomIndex];
+        }
+    }
 }

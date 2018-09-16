@@ -11,6 +11,8 @@ public class GameParameters : MonoBehaviour
     public float monsterAccelerationSidewaysAndBack = 0.75f;  //this is with AddForce()   //TODO cap speed, so it reacts like with 0.3f OR rewardgoingfast!
     public float monsterRotationSpeed = 200f;
 
+    public int respawnTime = 3;
+
     public float knockBackMultiplier = 10f;
 
     //this is with Rigidbody.Translate()
