@@ -5,20 +5,18 @@ using MLAgents;
 
 public class MonsterTrainerAcademy : Academy
 {
-    StartPositionGenerator startPosGenerator;
-    MasterGameAreaController gAreaController;
+    GameController gameControllerInstance;
 
     public override void InitializeAcademy()
     {
-        gAreaController = FindObjectOfType<MasterGameAreaController>();
-        startPosGenerator = FindObjectOfType<StartPositionGenerator>();
-        startPosGenerator.AssignRandomStartPositionsForAllMonsters();
+        gameControllerInstance = FindObjectOfType<GameController>();
+        Debug.Log("gameControllerInstance" + gameControllerInstance);
+        gameControllerInstance.initializeGame();
     }
 
     public override void AcademyReset()
     {
-        startPosGenerator.AssignRandomStartPositionsForAllMonsters();
-        gAreaController.ResetAllAreas();
+        gameControllerInstance.ResetGame();
     }
 
     public override void AcademyStep()

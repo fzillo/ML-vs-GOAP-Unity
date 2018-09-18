@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MasterGameAreaController : MonoBehaviour
+public class MasterAreaController : MonoBehaviour
 {
     public AreaController areaNorth;
     public AreaController areaSouth;

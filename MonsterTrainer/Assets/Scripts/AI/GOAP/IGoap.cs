@@ -62,6 +62,7 @@ public interface IGoap
     bool MoveAgent(GoapAction nextAction);
 
     //ADDED BY FZ
-    void CancelPlan();
+    //TODO DEBUGGEN
+    //void CancelPlan();
 }
 

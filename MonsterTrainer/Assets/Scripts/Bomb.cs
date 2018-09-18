@@ -8,6 +8,7 @@ public class Bomb : MonoBehaviour
     public GameObject attachedToGO;
 
     Vector3 startPos;
+    MasterAreaController masterAreaControllerInstance;
 
     float posXToGo;
     float posYToGo;
@@ -20,6 +21,7 @@ public class Bomb : MonoBehaviour
 
     void Start()
     {
+        masterAreaControllerInstance = FindObjectOfType<MasterAreaController>();
         bombRB = GetComponent<Rigidbody>();
         startPos = bombRB.transform.position;
         Debug.Log(this.gameObject.tag + "" + startPos);
@@ -86,6 +88,39 @@ public class Bomb : MonoBehaviour
 
         bombRB.transform.position = startPos;
         this.gameObject.SetActive(false);
+        isPickedUp = false;
+        isDetonated = false;
+    }
+
+    //TODO Refactor
+    public void ResetBombMidGame()
+    {
+        //TODO ResetTimer?
+        if (attachedToGO != null)
+        {
+            attachedToGO.GetComponentInChildren<Monster>().SetHasBomb(false);
+            attachedToGO = null;
+        }
+
+        if (this.tag == "mBomb")
+        {
+            if (!(masterAreaControllerInstance.areaNorth.conqueredByTeamM && masterAreaControllerInstance.areaSouth.conqueredByTeamM))
+            {
+
+                this.gameObject.SetActive(false);
+            }
+        }
+        else if (this.tag == "aBomb")
+        {
+            if (!(masterAreaControllerInstance.areaNorth.conqueredByTeamA && masterAreaControllerInstance.areaSouth.conqueredByTeamA))
+            {
+
+                this.gameObject.SetActive(false);
+            }
+        }
+
+
+        bombRB.transform.position = startPos;
         isPickedUp = false;
         isDetonated = false;
     }

@@ -21,8 +21,7 @@ public class MonsterHead : MonoBehaviour
             {
                 //get knocked and damaged
                 Vector3 vect = col.gameObject.GetComponentInParent<Rigidbody>().transform.position - this.GetComponentInParent<Rigidbody>().transform.position;
-                col.gameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized);
-                col.gameObject.GetComponentInParent<Monster>().GetDamaged();
+                col.gameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized, true);
                 //Rewarding Agent
                 this.gameObject.GetComponentInParent<MMonsterAgent>().RewardAgentForDamagingEnemy();
             }
@@ -30,7 +29,7 @@ public class MonsterHead : MonoBehaviour
             {
                 //get knocked
                 Vector3 vect = col.gameObject.GetComponentInParent<Rigidbody>().transform.position - this.GetComponentInParent<Rigidbody>().transform.position;
-                col.gameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized);
+                col.gameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized, false);
 
                 //Rewarding Agent
                 this.gameObject.GetComponentInParent<MMonsterAgent>().RewardAgentForKnockingEnemy();
@@ -45,14 +44,13 @@ public class MonsterHead : MonoBehaviour
             {
                 //get knocked and damaged
                 Vector3 vect = col.gameObject.GetComponentInParent<Rigidbody>().transform.position - this.GetComponentInParent<Rigidbody>().transform.position;
-                col.gameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized);
-                col.gameObject.GetComponentInParent<Monster>().GetDamaged();
+                col.gameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized, true);
             }
             else if (col.gameObject.tag == "mHead")
             {
                 //get knocked
                 Vector3 vect = col.gameObject.GetComponentInParent<Rigidbody>().transform.position - this.GetComponentInParent<Rigidbody>().transform.position;
-                col.gameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized);
+                col.gameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized, false);
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Monster : MonoBehaviour
 {
@@ -78,13 +79,16 @@ public class Monster : MonoBehaviour
         DieAndRespawn();
     }
 
-    public void GetKnockedBack(Vector3 vect)
+    public void GetKnockedBack(Vector3 vect, bool takeDamage)
     {
-        //GetDamaged();
 
         monsterRB.AddForce(vect * gParameters.knockBackMultiplier, ForceMode.Impulse);
         Debug.Log(this.gameObject.name + " got knocked back!");
-        waitForOneSecond();
+
+        if (takeDamage)
+        {
+            GetDamaged();
+        }
     }
 
     public bool HasBomb()
@@ -99,27 +103,37 @@ public class Monster : MonoBehaviour
 
     public void DieAndRespawn()
     {
+        if (hasBomb)
+        {
+            GameObject attachedBomb = tControler.teamBomb;
+            Bomb bombEntity = attachedBomb.GetComponent<Bomb>();
+            bombEntity.ResetBombMidGame();
+            hasBomb = false;
+        }
+
+        monsterRB.transform.position = new Vector3(0, -10, 0); //TODO remove
+
         isAlive = false;
-        //TODO die after knockback
         this.gameObject.SetActive(false);
-        waitForRespawn();
+        Debug.Log("INACTIVE!");
+        Invoke("WaitForRespawnInvoke", gParameters.respawnTime);
+    }
+
+    void WaitForRespawnInvoke()
+    {
+        Debug.Log("ACTIVE!");
         tControler.RespawnMonster(this);
-        this.gameObject.SetActive(true);
-    }
-
-    IEnumerator waitForOneSecond()
-    {
-        yield return new WaitForSeconds(gParameters.respawnTime);
-    }
-
-    IEnumerator waitForRespawn()
-    {
-        yield return new WaitForSeconds(gParameters.respawnTime);
     }
 
     public void Reset()
     {
+        this.gameObject.SetActive(true);
         hasBomb = false;
         isAlive = true;
+        /*   if (agent != null)
+           {
+               agent.CancelPlan();
+           }
+           */
     }
 }

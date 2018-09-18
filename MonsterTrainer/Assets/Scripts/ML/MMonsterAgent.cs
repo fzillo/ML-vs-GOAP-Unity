@@ -6,7 +6,7 @@ using MLAgents;
 public class MMonsterAgent : Agent
 {
     MonsterTrainerAcademy academy;
-    MasterGameAreaController gAreaController;
+    MasterAreaController masterAreaControl;
 
     public Rigidbody monsterRB;
     private RayPerception rayPer;
@@ -14,7 +14,7 @@ public class MMonsterAgent : Agent
 
     public override void InitializeAgent()
     {
-        gAreaController = FindObjectOfType<MasterGameAreaController>();
+        masterAreaControl = FindObjectOfType<MasterAreaController>();
         academy = FindObjectOfType<MonsterTrainerAcademy>();
         rayPer = GetComponent<RayPerception>();
         monsterRB = GetComponent<Rigidbody>();
@@ -33,10 +33,10 @@ public class MMonsterAgent : Agent
         AddVectorObs(rayPer.Perceive(10f, rayAngles, detectableObjects, 0f, -1f));
         AddVectorObs(rayPer.Perceive(2f, rayAngles, detectableObjects, 0f, -2.5f));
         AddVectorObs(rayPer.Perceive(1f, rayAngles, detectableObjects, 0f, -5f));
-        AddVectorObs(gAreaController.areaNorth.conqueredByTeamM);
-        AddVectorObs(gAreaController.areaSouth.conqueredByTeamM);
-        AddVectorObs(gAreaController.areaNorth.conqueredByTeamA);
-        AddVectorObs(gAreaController.areaSouth.conqueredByTeamA);
+        AddVectorObs(masterAreaControl.areaNorth.conqueredByTeamM);
+        AddVectorObs(masterAreaControl.areaSouth.conqueredByTeamM);
+        AddVectorObs(masterAreaControl.areaNorth.conqueredByTeamA);
+        AddVectorObs(masterAreaControl.areaSouth.conqueredByTeamA);
         AddVectorObs(this.GetComponentInParent<Monster>().hasBomb);
         AddVectorObs(transform.InverseTransformDirection(monsterRB.velocity));
     }

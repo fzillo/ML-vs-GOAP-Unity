@@ -212,6 +212,7 @@ public sealed class GoapAgent : MonoBehaviour
 
 
     //ADDED BY FZ
+    /*
     public void CancelPlan()
     {
         if (!stateMachine.IsStackEmpty())
@@ -221,4 +222,5 @@ public sealed class GoapAgent : MonoBehaviour
         stateMachine.pushState(idleState);
         Debug.Log("PLAN CANCELLED!");
     }
+     */
 }

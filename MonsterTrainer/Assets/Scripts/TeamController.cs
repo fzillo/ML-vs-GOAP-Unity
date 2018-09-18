@@ -17,7 +17,7 @@ public class TeamController : MonoBehaviour
         startPosGen = FindObjectOfType<StartPositionGenerator>();
     }
 
-    public RespawnMonster(Monster monsterEntity)
+    public void RespawnMonster(Monster monsterEntity)
     {
         startPosGen.AssignRandomStartPositionsForMonster(monsterEntity);
         monsterEntity.Reset();

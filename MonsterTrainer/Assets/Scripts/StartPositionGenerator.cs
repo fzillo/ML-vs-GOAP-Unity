@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class StartPositionGenerator : MonoBehaviour
 {
-    List<GameObject> monsterGameobjectsTeamM;
-    List<GameObject> monsterGameobjectsTeamA;
+    public List<GameObject> monsterGameobjectsTeamM;
+    public List<GameObject> monsterGameobjectsTeamA;
 
     List<Vector3> startPositionsTeamM = new List<Vector3>();
     List<Vector3> startPositionsTeamA = new List<Vector3>();
 
     Quaternion startRotationTeamM = new Quaternion(0, 0, 0, 0);
     Quaternion startRotationTeamA = new Quaternion(0, 0, 0, 0);
+
+    public TeamController teamMController;
+    public TeamController teamAController;
 
 
     int listIndexTeamM = 0;
@@ -22,9 +25,13 @@ public class StartPositionGenerator : MonoBehaviour
 
     void Start()
     {
-        monsterGameobjectsTeamM = new List<GameObject>(teamMController.teamMonster);
-        //Debug.Log(monstersTeamM.Count);
-        monsterGameobjectsTeamA = new List<GameObject>(teamAControl.teamMonster);
+        /*
+        //TODO this needs to happen before Academy starts
+        monsterGameobjectsTeamM = new List<GameObject>(teamMController.teamMonsterList);
+        Debug.Log("monsterGameobjectsTeamM.Count :" + monsterGameobjectsTeamM.Count);
+        monsterGameobjectsTeamA = new List<GameObject>(teamAController.teamMonsterList);
+        Debug.Log("monsterGameobjectsTeamA.Count :" + monsterGameobjectsTeamA.Count);
+        */
     }
 
     public void AssignRandomStartPositionsForAllMonsters()
@@ -113,13 +120,15 @@ public class StartPositionGenerator : MonoBehaviour
         monsterRB.angularVelocity = Vector3.zero;
         if (monsterEntity.tag == "mMonster")
         {
-            Integer randomIndex = Random.RangeInt(0, startPositionsTeamM.Count - 1);
+            int randomIndex = Random.Range(0, startPositionsTeamM.Count - 1);
             monsterRB.transform.position = startPositionsTeamM[randomIndex];
+            monsterRB.transform.rotation = startRotationTeamM;
         }
         else if (monsterEntity.tag == "aMonster")
         {
-            Integer randomIndex = Random.RangeInt(0, startPositionsTeamA.Count - 1);
+            int randomIndex = Random.Range(0, startPositionsTeamA.Count - 1);
             monsterRB.transform.position = startPositionsTeamA[randomIndex];
+            monsterRB.transform.rotation = startRotationTeamM;
         }
     }
 }

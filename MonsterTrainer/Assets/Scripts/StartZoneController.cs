@@ -5,13 +5,13 @@ using UnityEngine;
 public class StartZoneController : MonoBehaviour
 {
 
-    MasterGameAreaController gAreaController;
+    MasterAreaController masterAreaControl;
 
     public bool isDetonated;
 
     void Start()
     {
-        gAreaController = FindObjectOfType<MasterGameAreaController>();
+        masterAreaControl = FindObjectOfType<MasterAreaController>();
         isDetonated = false;
     }
 
@@ -24,11 +24,11 @@ public class StartZoneController : MonoBehaviour
     {
         if (this.gameObject.tag == "startZoneM" && col.gameObject.tag == "aMonster" && col.gameObject.GetComponent<Monster>().hasBomb)
         {
-            gAreaController.StartZoneMDetonates();
+            masterAreaControl.StartZoneMDetonates();
         }
         else if (this.gameObject.tag == "startZoneA" && col.gameObject.tag == "mMonster" && col.gameObject.GetComponent<Monster>().hasBomb)
         {
-            gAreaController.StartZoneADetonates();
+            masterAreaControl.StartZoneADetonates();
         }
     }
 }

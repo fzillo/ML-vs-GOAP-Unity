@@ -58,10 +58,11 @@ public class AMonsterAgent : MonoBehaviour, IGoap
       */
     public bool MoveAgent(GoapAction nextAction)
     {
-        if (!nextAction.checkProceduralPrecondition(this.gameObject))
+        //TODO DEBUGGEN!
+        /*if (!nextAction.checkProceduralPrecondition(this.gameObject))
         {
             CancelPlan();
-        }
+        }*/
 
 
         //if we don't need to move anywhere
@@ -71,6 +72,7 @@ public class AMonsterAgent : MonoBehaviour, IGoap
             return true;
         }
 
+        //if (agent.isOnNavMesh)
         agent.SetDestination(nextAction.target.transform.position);
 
         if (agent.hasPath && agent.remainingDistance < 2)
@@ -134,8 +136,12 @@ public class AMonsterAgent : MonoBehaviour, IGoap
 
     }
 
-    public void CancelPlan()
-    {
-        this.GetComponent<GoapAgent>().CancelPlan();
-    }
+    //TODO DEBUGGEN!
+    /*
+        public void CancelPlan()
+        {
+            agent.ResetPath();
+            this.GetComponent<GoapAgent>().CancelPlan();
+        }
+     */
 }

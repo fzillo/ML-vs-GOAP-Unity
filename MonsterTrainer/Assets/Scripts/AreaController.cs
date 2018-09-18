@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AreaController : MonoBehaviour
 {
-    MasterGameAreaController gAreaController;
+    MasterAreaController masterAreaControl;
 
     public bool conqueredByNone;
     public bool conqueredByTeamM;
@@ -22,10 +22,33 @@ public class AreaController : MonoBehaviour
 
     void Start()
     {
-        gAreaController = FindObjectOfType<MasterGameAreaController>();
+        masterAreaControl = FindObjectOfType<MasterAreaController>();
     }
 
     void Update()
+    {
+        if (occupiedByTeamM && occupiedByTeamA)
+        {
+            changeAreaToNeutral();
+        }
+        else if (occupiedByTeamM && !occupiedByTeamA)
+        {
+            changeAreaToTeamM();
+        }
+        else if (!occupiedByTeamM && occupiedByTeamA)
+        {
+            changeAreaToTeamA();
+        }
+        /*else if (!occupiedByTeamM && !occupiedByTeamA)
+        {
+            changeAreaToNeutral();
+        }*/
+
+        occupiedByTeamM = false;
+        occupiedByTeamA = false;
+    }
+
+    void FixedUpdate()
     {
 
     }
@@ -49,35 +72,22 @@ public class AreaController : MonoBehaviour
             occupiedByTeamA = true;
         }
 
-        if (occupiedByTeamM && occupiedByTeamA)
-        {
-            changeAreaToNeutral();
-        }
-        else if (occupiedByTeamM && !occupiedByTeamA)
-        {
-            changeAreaToTeamM(col.gameObject);
-        }
-        else if (!occupiedByTeamM && occupiedByTeamA)
-        {
-            changeAreaToTeamA();
-        }
-        else if (!occupiedByTeamM && !occupiedByTeamA)
-        {
-            changeAreaToNeutral();
-        }
+
 
     }
 
     void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == "mMonster")
-        {
-            occupiedByTeamM = false;
-        }
-        if (col.gameObject.tag == "aMonster")
-        {
-            occupiedByTeamA = false;
-        }
+        /*
+                if (col.gameObject.tag == "mMonster")
+                {
+                    occupiedByTeamM = false;
+                }
+                if (col.gameObject.tag == "aMonster")
+                {
+                    occupiedByTeamA = false;
+                }
+                 */
     }
 
     void changeAreaToNeutral()
@@ -93,7 +103,7 @@ public class AreaController : MonoBehaviour
     }
 
 
-    void changeAreaToTeamM(GameObject gObj)
+    void changeAreaToTeamM()
     {
         if (!conqueredByTeamM)
         {
@@ -102,12 +112,12 @@ public class AreaController : MonoBehaviour
             conqueredByTeamM = true;
             conqueredByTeamA = false;
             changeColorToTeamM();
-            gAreaController.NotifyAreaChanged();
+            masterAreaControl.NotifyAreaChanged();
 
-
-            MMonsterAgent mAgent = gObj.GetComponentInChildren<MMonsterAgent>();
-            if (mAgent != null)
-                mAgent.RewardAgentForConqueringArea();
+            //TODO FIX REWARD AGENT
+            //MMonsterAgent mAgent = gObj.GetComponentInChildren<MMonsterAgent>();
+            //if (mAgent != null)
+            //    mAgent.RewardAgentForConqueringArea();
         }
     }
 
@@ -120,7 +130,7 @@ public class AreaController : MonoBehaviour
             conqueredByTeamM = false;
             conqueredByTeamA = true;
             changeColorToTeamA();
-            gAreaController.NotifyAreaChanged();
+            masterAreaControl.NotifyAreaChanged();
         }
     }
 
