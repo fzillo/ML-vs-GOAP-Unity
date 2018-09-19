@@ -6,28 +6,27 @@ public class GameController : MonoBehaviour
 {
     /*
     TODO LIST
-    - Get CancelPlan to work for GoapAgents without them standing around!
     - Find all Entities in Initialization
     - port to ml v0.5
     - get multibrain to work
     - calculate goap costs dynamically
     - let agent die on deathzone
-    - bug: amonsteragent is stuck if it dies on way to objective area
-    - <fixed?> bug: navmeshagent sometimes breaks "Failed to create agent because it is not close enough to the NavMesh"
+    - AMonsterAgent MoveAgent() -> should check if preconditions are still true
      */
+
 
 
 
     StartPositionGenerator startPosGenerator;
     MasterAreaController masterAreaControl;
+
+    TeamController teamMController;
+    TeamController teamAController;
+
     // Use this for initialization
     void Start()
     {
-        if (masterAreaControl == null || startPosGenerator == null)
-        {
-            masterAreaControl = FindObjectOfType<MasterAreaController>();
-            startPosGenerator = FindObjectOfType<StartPositionGenerator>();
-        }
+        AssignObjects();
     }
 
     // Update is called once per frame
@@ -36,13 +35,23 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void initializeGame()
+    private void AssignObjects()
     {
-        if (masterAreaControl == null || startPosGenerator == null)
+        if (masterAreaControl == null || startPosGenerator == null || teamMController == null || teamAController == null)
         {
             masterAreaControl = FindObjectOfType<MasterAreaController>();
             startPosGenerator = FindObjectOfType<StartPositionGenerator>();
+
+            GameObject teamMControllerGameObject = GameObject.Find("TeamMController");
+            GameObject teamAControllerGameObject = GameObject.Find("TeamAController");
+            teamMController = teamMControllerGameObject.GetComponent<TeamController>();
+            teamAController = teamAControllerGameObject.GetComponent<TeamController>();
         }
+    }
+
+    public void initializeGame()
+    {
+        AssignObjects();
         startPosGenerator.AssignRandomStartPositionsForAllMonsters();
     }
 
@@ -50,5 +59,7 @@ public class GameController : MonoBehaviour
     {
         startPosGenerator.AssignRandomStartPositionsForAllMonsters();
         masterAreaControl.ResetAllAreas();
+        // teamMController.ResetAllMonsters();
+        //teamAController.ResetAllMonsters();
     }
 }

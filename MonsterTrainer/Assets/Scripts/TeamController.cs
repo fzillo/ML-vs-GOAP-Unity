@@ -22,4 +22,16 @@ public class TeamController : MonoBehaviour
         startPosGen.AssignRandomStartPositionsForMonster(monsterEntity);
         monsterEntity.Reset();
     }
+
+    public void ResetAllMonsters()
+    {
+        foreach (GameObject monsterGameObject in teamMonsterList)
+        {
+            Monster monsterEntity = monsterGameObject.GetComponent<Monster>();
+            if (!monsterEntity.deactivatedAtStart)
+            {
+                monsterEntity.Reset();
+            }
+        }
+    }
 }

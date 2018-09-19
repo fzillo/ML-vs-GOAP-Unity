@@ -18,6 +18,7 @@ public class Bomb : MonoBehaviour
 
     public bool isPickedUp;
     public bool isDetonated;
+    public bool hasSpawned;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class Bomb : MonoBehaviour
         posYToGo = bombRB.transform.position.y;
         isPickedUp = false;
         isDetonated = false;
+        hasSpawned = false;
 
         this.gameObject.SetActive(false);
 
@@ -64,7 +66,8 @@ public class Bomb : MonoBehaviour
     public void ActivateBomb()
     {
         this.gameObject.SetActive(true);
-        Debug.Log("Activate Bomb " + this.gameObject.tag + " at " + startPos);
+        hasSpawned = true;
+        Debug.Log("Activate Bomb " + this.gameObject.tag + " at " + startPos + " hasSpawned " + hasSpawned);
     }
 
     public void DetonateBomb()
@@ -90,6 +93,7 @@ public class Bomb : MonoBehaviour
         this.gameObject.SetActive(false);
         isPickedUp = false;
         isDetonated = false;
+        hasSpawned = false;
     }
 
     //TODO Refactor
@@ -123,5 +127,6 @@ public class Bomb : MonoBehaviour
         bombRB.transform.position = startPos;
         isPickedUp = false;
         isDetonated = false;
+        hasSpawned = false;
     }
 }

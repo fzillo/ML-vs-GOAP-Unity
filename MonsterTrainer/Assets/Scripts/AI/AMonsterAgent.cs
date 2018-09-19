@@ -5,19 +5,24 @@ using UnityEngine.AI;
 
 public class AMonsterAgent : MonoBehaviour, IGoap
 {
-    NavMeshAgent agent;
-    Vector3 previousDestination;
+    NavMeshAgent navAgent;
+    Vector3 previousDestination; //TODO remove?
+    //GoapAction previousAction;
+
+
+    //List<GoapAction> goapActionList = new List<GoapAction>();
     //AreaController[] areas;
 
     //TODO CANCEL PLAN ON RESET!
 
     //TODO zentral verwalten
     public Bomb teamBomb;
+    //public GameObject teamBombGO;
 
     // Use this for initialization
     void Start()
     {
-        agent = this.GetComponent<NavMeshAgent>();
+        navAgent = this.GetComponent<NavMeshAgent>();
     }
 
     /**
@@ -29,8 +34,20 @@ public class AMonsterAgent : MonoBehaviour, IGoap
         HashSet<KeyValuePair<string, object>> worldData = new HashSet<KeyValuePair<string, object>>();
 
         worldData.Add(new KeyValuePair<string, object>("isReady", true));
-        worldData.Add(new KeyValuePair<string, object>("bombActive", teamBomb.isActiveAndEnabled));
+        Debug.Log("worldData isReady " + true);
+
+        /*
+            if (teamBomb == null)
+            {
+                GameObject bombGo = GameObject.FindGameObjectWithTag("aBomb");
+                teamBomb = bombGo.GetComponent<Bomb>();
+            }
+            */
+
+        worldData.Add(new KeyValuePair<string, object>("bombActive", teamBomb.hasSpawned));
+        Debug.Log("worldData bombActive " + teamBomb + " hasSpawned " + teamBomb.hasSpawned);
         worldData.Add(new KeyValuePair<string, object>("bombPickedUp", teamBomb.isPickedUp));
+        Debug.Log("worldData bombPickedUp " + teamBomb.isPickedUp);
 
         return worldData;
     }
@@ -58,24 +75,41 @@ public class AMonsterAgent : MonoBehaviour, IGoap
       */
     public bool MoveAgent(GoapAction nextAction)
     {
-        //TODO DEBUGGEN!
-        /*if (!nextAction.checkProceduralPrecondition(this.gameObject))
+        //TODO Wieder einbauen, allerdings ohne checkProceduralPrecondition
+        /*
+        if (!nextAction.checkProceduralPrecondition(this.gameObject))
         {
+            Debug.Log("ProceduralPrecondition false for " + nextAction);
             CancelPlan();
-        }*/
+            return true;
+        }
+    */
 
 
+
+        /*
+        //BUG DEBUGGING
+        goapActionList.Add(nextAction);
+
+        GoapAction previousAction = null;
+        if (goapActionList.Count > 1)
+            previousAction = goapActionList[goapActionList.Count - 2];
+        Debug.Log("previousAction " + previousAction + " nextAction " + nextAction);
+
+        //THIS MADE PROBLEMS AFTER RESPAWN WHEN LAST ACTION WAS EQUAL NEXT ACTION
         //if we don't need to move anywhere
         if (previousDestination == nextAction.target.transform.position)
         {
+            Debug.Log("previousDestination " + previousDestination + " nextAction " + nextAction + " nextAction.target.transform.position " + nextAction.target.transform.position);
             nextAction.setInRange(true);
             return true;
         }
+        */
 
         //if (agent.isOnNavMesh)
-        agent.SetDestination(nextAction.target.transform.position);
+        navAgent.SetDestination(nextAction.target.transform.position);
 
-        if (agent.hasPath && agent.remainingDistance < 2)
+        if (navAgent.hasPath && navAgent.remainingDistance < 2)
         {
             nextAction.setInRange(true);
             previousDestination = nextAction.target.transform.position;
@@ -92,11 +126,11 @@ public class AMonsterAgent : MonoBehaviour, IGoap
     void Update()
     {
         // cosmetic
-        if (agent.hasPath)
+        if (navAgent.hasPath)
         {
-            Vector3 toTarget = agent.steeringTarget - this.transform.position;
+            Vector3 toTarget = navAgent.steeringTarget - this.transform.position;
             float turnAngle = Vector3.Angle(this.transform.forward, toTarget);
-            agent.acceleration = turnAngle * agent.speed;
+            navAgent.acceleration = turnAngle * navAgent.speed;
         }
 
     }
@@ -137,11 +171,16 @@ public class AMonsterAgent : MonoBehaviour, IGoap
     }
 
     //TODO DEBUGGEN!
-    /*
-        public void CancelPlan()
+
+    public void CancelPlan()
+    {
+        Debug.Log("CANCEL PLAN AMONSTERAGENT FOR " + this.gameObject);
+        /*if (navAgent != null && navAgent.hasPath)
         {
-            agent.ResetPath();
-            this.GetComponent<GoapAgent>().CancelPlan();
-        }
-     */
+            navAgent.ResetPath();
+        }*/
+        this.GetComponent<GoapAgent>().CancelPlan();
+        Debug.Log("RESET PATH AMONSTERAGENT FOR " + this.gameObject);
+
+    }
 }

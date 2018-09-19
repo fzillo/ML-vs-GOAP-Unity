@@ -63,6 +63,6 @@ public interface IGoap
 
     //ADDED BY FZ
     //TODO DEBUGGEN
-    //void CancelPlan();
+    void CancelPlan();
 }
 

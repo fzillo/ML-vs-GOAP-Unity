@@ -10,9 +10,12 @@ public class Monster : MonoBehaviour
     public bool isAlive;
     public bool hasBomb;
 
+    public bool deactivatedAtStart = true;
+
     GameParameters gParameters;
 
     Rigidbody monsterRB;
+    //GameObject monsterGO;
 
 
 
@@ -20,6 +23,15 @@ public class Monster : MonoBehaviour
     {
         gParameters = FindObjectOfType<GameParameters>();
         monsterRB = GetComponent<Rigidbody>();
+        //monsterGO = this.gameObject;
+
+        /*
+        if (monsterGO.activeInHierarchy)
+        {
+            deactivatedAtStart = false;
+            Debug.Log(this.gameObject + " deactivatedAtStart " + deactivatedAtStart);
+        }
+        */
 
         isAlive = true;
         hasBomb = false;
@@ -130,10 +142,13 @@ public class Monster : MonoBehaviour
         this.gameObject.SetActive(true);
         hasBomb = false;
         isAlive = true;
-        /*   if (agent != null)
-           {
-               agent.CancelPlan();
-           }
-           */
+        AMonsterAgent goapAgent = GetComponent<AMonsterAgent>();
+        Debug.Log("AGENT CANCEL PLAN" + goapAgent);
+        /*
+        if (goapAgent != null)
+        {
+            goapAgent.CancelPlan();
+        }
+        */
     }
 }

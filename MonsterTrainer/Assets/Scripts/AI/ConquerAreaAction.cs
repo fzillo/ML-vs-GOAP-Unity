@@ -49,8 +49,7 @@ public class ConquerAreaAction : GoapAction
 
         foreach (AreaController area in areas)
         {
-            if (area.conqueredByTeamA
-            || area.occupiedByTeamM) //TODO Testen!
+            if (area.conqueredByTeamA) //TODO Testen!
             {
                 continue;
             }
