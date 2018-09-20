@@ -35,6 +35,7 @@ public class Monster : MonoBehaviour
 
         isAlive = true;
         hasBomb = false;
+        deactivatedAtStart = false;
     }
 
     void Update()
@@ -144,11 +145,11 @@ public class Monster : MonoBehaviour
         isAlive = true;
         AMonsterAgent goapAgent = GetComponent<AMonsterAgent>();
         Debug.Log("AGENT CANCEL PLAN" + goapAgent);
-        /*
+
         if (goapAgent != null)
         {
             goapAgent.CancelPlan();
         }
-        */
+
     }
 }

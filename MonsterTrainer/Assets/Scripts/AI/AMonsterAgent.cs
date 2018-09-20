@@ -77,15 +77,14 @@ public class AMonsterAgent : MonoBehaviour, IGoap
     {
         //TODO Wieder einbauen, allerdings ohne checkProceduralPrecondition
         /*
+        GetWorldState();
         if (!nextAction.checkProceduralPrecondition(this.gameObject))
         {
             Debug.Log("ProceduralPrecondition false for " + nextAction);
             CancelPlan();
             return true;
         }
-    */
-
-
+ */
 
         /*
         //BUG DEBUGGING
@@ -175,10 +174,10 @@ public class AMonsterAgent : MonoBehaviour, IGoap
     public void CancelPlan()
     {
         Debug.Log("CANCEL PLAN AMONSTERAGENT FOR " + this.gameObject);
-        /*if (navAgent != null && navAgent.hasPath)
+        if (navAgent != null && navAgent.hasPath)
         {
             navAgent.ResetPath();
-        }*/
+        }
         this.GetComponent<GoapAgent>().CancelPlan();
         Debug.Log("RESET PATH AMONSTERAGENT FOR " + this.gameObject);
 

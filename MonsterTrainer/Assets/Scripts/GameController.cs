@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     - get multibrain to work
     - calculate goap costs dynamically
     - let agent die on deathzone
-    - AMonsterAgent MoveAgent() -> should check if preconditions are still true
+    ~ AMonsterAgent MoveAgent() -> should check if preconditions are still true
      */
 
 
@@ -59,7 +59,7 @@ public class GameController : MonoBehaviour
     {
         startPosGenerator.AssignRandomStartPositionsForAllMonsters();
         masterAreaControl.ResetAllAreas();
-        // teamMController.ResetAllMonsters();
-        //teamAController.ResetAllMonsters();
+        teamMController.ResetAllMonsters();
+        teamAController.ResetAllMonsters();
     }
 }

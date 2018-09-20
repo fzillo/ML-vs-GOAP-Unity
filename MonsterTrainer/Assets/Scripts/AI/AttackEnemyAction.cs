@@ -81,6 +81,8 @@ public class AttackEnemyAction : GoapAction
             startTime = Time.time;
         }
 
+        Debug.Log(name + " completed " + completed + " !target.GetComponent<Monster>().isAlive " + !target.GetComponent<Monster>().isAlive);
+
         if (!target.GetComponent<Monster>().isAlive)
         {
             Debug.Log("Finished: " + name);

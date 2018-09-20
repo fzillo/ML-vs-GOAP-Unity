@@ -28,6 +28,7 @@ public class TeamController : MonoBehaviour
         foreach (GameObject monsterGameObject in teamMonsterList)
         {
             Monster monsterEntity = monsterGameObject.GetComponent<Monster>();
+            Debug.Log("!monsterEntity.deactivatedAtStart " + !monsterEntity.deactivatedAtStart + " monsterEntity " + monsterEntity);
             if (!monsterEntity.deactivatedAtStart)
             {
                 monsterEntity.Reset();
