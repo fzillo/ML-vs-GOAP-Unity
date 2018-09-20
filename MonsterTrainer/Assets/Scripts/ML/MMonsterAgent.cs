@@ -43,24 +43,25 @@ public class MMonsterAgent : Agent
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
-        //Rewarding Agent (negative)
-        RewardAgentForExisting();
+        //Existential Malus, so it does something
+        PunishAgentForExisting();
 
         Move(vectorAction);
 
     }
 
+    /* 
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "deadzone")
         {
-            //Rewarding Agent (negative)
-            RewardAgentForDying();
+            PunishAgentForDying();
 
             Debug.Log("Dead!");
             academy.Done();
         }
     }
+    */
 
     public override void AgentReset()
     {
@@ -137,13 +138,13 @@ public class MMonsterAgent : Agent
         Debug.Log("RewardAgentForDetonatingBomb 2f " + this.gameObject.tag);
     }
 
-    public void RewardAgentForExisting()
+    public void PunishAgentForExisting()
     {
         AddReward(-1f / 3000);
         //Debug.Log("RewardAgentForExisting -1f / 3000f " + this.gameObject.tag);
     }
 
-    public void RewardAgentForDying()
+    public void PunishAgentForDying()
     {
         AddReward(-5f);
         Debug.Log("RewardAgentForDying -5f " + this.gameObject.tag);

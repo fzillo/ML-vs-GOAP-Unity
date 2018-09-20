@@ -9,8 +9,9 @@ public class GameController : MonoBehaviour
     - Find all Entities in Initialization
     - port to ml v0.5
     - get multibrain to work
+    - fix reward/punish for mlagents
     - calculate goap costs dynamically
-    - let agent die on deathzone
+    ~ attack more persistently
     ~ AMonsterAgent MoveAgent() -> should check if preconditions are still true
      */
 

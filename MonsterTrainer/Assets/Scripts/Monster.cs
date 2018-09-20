@@ -43,6 +43,18 @@ public class Monster : MonoBehaviour
 
     }
 
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "deadzone")
+        {
+            //PunishAgentForDying(); //TODO activate this again
+
+            Debug.Log("Deadzone!");
+            DieAndRespawn();
+            //academy.Done();
+        }
+    }
+
     void FixedUpdate()
     {
 
