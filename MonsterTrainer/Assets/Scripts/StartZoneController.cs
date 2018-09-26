@@ -22,11 +22,11 @@ public class StartZoneController : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (this.gameObject.tag == "startZoneM" && col.gameObject.tag == "aMonster" && col.gameObject.GetComponent<Monster>().hasBomb)
+        if (this.gameObject.tag == "teamMLStartZone" && col.gameObject.tag == "goapMonster" && col.gameObject.GetComponent<Monster>().hasBomb)
         {
             masterAreaControl.StartZoneMDetonates();
         }
-        else if (this.gameObject.tag == "startZoneA" && col.gameObject.tag == "mMonster" && col.gameObject.GetComponent<Monster>().hasBomb)
+        else if (this.gameObject.tag == "teamGOAPStartZone" && col.gameObject.tag == "mlMonster" && col.gameObject.GetComponent<Monster>().hasBomb)
         {
             masterAreaControl.StartZoneADetonates();
         }

@@ -7,14 +7,22 @@ public class MasterAreaController : MonoBehaviour
     public AreaController areaNorth;
     public AreaController areaSouth;
 
-    public Bomb bombTeamM;
-    public Bomb bombTeamA;
+    public Bomb bombTeamML;
+    public Bomb bombTeamGOAP;
 
     MonsterTrainerAcademy academy;
+
+    //TODO remove here?
+    TeamController teamMLController;
 
     void Start()
     {
         academy = FindObjectOfType<MonsterTrainerAcademy>();
+
+
+        //we need teamMController for Rewards
+        GameObject teamMControllerGameObject = GameObject.Find("TeamMLController");
+        teamMLController = teamMControllerGameObject.GetComponent<TeamController>();
     }
 
     void Update()
@@ -30,35 +38,60 @@ public class MasterAreaController : MonoBehaviour
     public void ResetAllAreas()
     {
         areaNorth.ResetArea();
-        bombTeamM.ResetBomb();
+        bombTeamML.ResetBomb();
 
         areaSouth.ResetArea();
-        bombTeamA.ResetBomb();
+        bombTeamGOAP.ResetBomb();
     }
 
     public void StartZoneMDetonates()
     {
-        Debug.Log("Team A wins the Game!");
-        bombTeamA.DetonateBomb();
+        Debug.Log("Team GOAP wins the Game!");
+        bombTeamGOAP.DetonateBomb();
+
+        List<GameObject> teamMMonsters = teamMLController.teamMonsterList;
+        foreach (GameObject mMonsterEntity in teamMMonsters)
+        {
+            MLMonsterAgent mlAgent = mMonsterEntity.GetComponentInChildren<MLMonsterAgent>();
+            if (mlAgent != null)
+            {
+                mlAgent.PunishAgentForLosing();
+            }
+        }
+
         academy.Done();
     }
 
     public void StartZoneADetonates()
     {
-        Debug.Log("Team M wins the Game!");
-        bombTeamM.DetonateBomb();
+        Debug.Log("Team ML wins the Game!");
+        bombTeamML.DetonateBomb();
+
+        //TODO reward all?
+        List<GameObject> teamMMonsters = teamMLController.teamMonsterList;
+        foreach (GameObject mMonsterEntity in teamMMonsters)
+        {
+            MLMonsterAgent mlAgent = mMonsterEntity.GetComponentInChildren<MLMonsterAgent>();
+            if (mlAgent != null)
+            {
+                mlAgent.RewardAgentForWinning();
+            }
+        }
+
         academy.Done();
+
+
     }
 
     private void activateBombIfBothConqueredByOneTeam()
     {
-        if (areaNorth.conqueredByTeamM && areaSouth.conqueredByTeamM)
+        if (areaNorth.conqueredByTeamML && areaSouth.conqueredByTeamML)
         {
-            bombTeamM.ActivateBomb();
+            bombTeamML.ActivateBomb();
         }
-        else if (areaNorth.conqueredByTeamA && areaSouth.conqueredByTeamA)
+        else if (areaNorth.conqueredByTeamGOAP && areaSouth.conqueredByTeamGOAP)
         {
-            bombTeamA.ActivateBomb();
+            bombTeamGOAP.ActivateBomb();
         }
     }
 }

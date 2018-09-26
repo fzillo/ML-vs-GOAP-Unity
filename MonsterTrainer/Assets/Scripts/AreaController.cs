@@ -6,15 +6,18 @@ public class AreaController : MonoBehaviour
 {
     MasterAreaController masterAreaControl;
 
+    //TODO remove here?
+    TeamController teamMLController;
+
     public bool conqueredByNone;
-    public bool conqueredByTeamM;
-    public bool conqueredByTeamA;
+    public bool conqueredByTeamML;
+    public bool conqueredByTeamGOAP;
 
-    public bool occupiedByTeamM;
-    public bool occupiedByTeamA;
+    public bool occupiedByTeamML;
+    public bool occupiedByTeamGOAP;
 
-    public Material teamMmaterial;
-    public Material teamAmaterial;
+    public Material teamMLMaterial;
+    public Material teamGOAPMaterial;
     public Material defaultMaterial;
 
     public GameObject westLine;
@@ -23,29 +26,29 @@ public class AreaController : MonoBehaviour
     void Start()
     {
         masterAreaControl = FindObjectOfType<MasterAreaController>();
+
+        //we need teamMController for Rewards
+        GameObject teamMControllerGameObject = GameObject.Find("TeamMLController");
+        teamMLController = teamMControllerGameObject.GetComponent<TeamController>();
     }
 
     void Update()
     {
-        if (occupiedByTeamM && occupiedByTeamA)
+        if (occupiedByTeamML && occupiedByTeamGOAP)
         {
             changeAreaToNeutral();
         }
-        else if (occupiedByTeamM && !occupiedByTeamA)
+        else if (occupiedByTeamML && !occupiedByTeamGOAP)
         {
-            changeAreaToTeamM();
+            changeAreaToTeamML();
         }
-        else if (!occupiedByTeamM && occupiedByTeamA)
+        else if (!occupiedByTeamML && occupiedByTeamGOAP)
         {
-            changeAreaToTeamA();
+            changeAreaToTeamGOAP();
         }
-        /*else if (!occupiedByTeamM && !occupiedByTeamA)
-        {
-            changeAreaToNeutral();
-        }*/
 
-        occupiedByTeamM = false;
-        occupiedByTeamA = false;
+        occupiedByTeamML = false;
+        occupiedByTeamGOAP = false;
     }
 
     void FixedUpdate()
@@ -56,39 +59,25 @@ public class AreaController : MonoBehaviour
     public void ResetArea()
     {
         changeAreaToNeutral();
-        occupiedByTeamM = false;
-        occupiedByTeamA = false;
+        occupiedByTeamML = false;
+        occupiedByTeamGOAP = false;
     }
 
     void OnTriggerStay(Collider col)
-    //void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "mMonster")
+        if (col.gameObject.tag == "mlMonster")
         {
-            occupiedByTeamM = true;
+            occupiedByTeamML = true;
         }
-        if (col.gameObject.tag == "aMonster")
+        if (col.gameObject.tag == "goapMonster")
         {
-            occupiedByTeamA = true;
+            occupiedByTeamGOAP = true;
         }
 
 
 
     }
 
-    void OnTriggerExit(Collider col)
-    {
-        /*
-                if (col.gameObject.tag == "mMonster")
-                {
-                    occupiedByTeamM = false;
-                }
-                if (col.gameObject.tag == "aMonster")
-                {
-                    occupiedByTeamA = false;
-                }
-                 */
-    }
 
     void changeAreaToNeutral()
     {
@@ -96,55 +85,59 @@ public class AreaController : MonoBehaviour
         {
             Debug.Log(this.gameObject.tag + " changeAreaToNeutral");
             conqueredByNone = true;
-            conqueredByTeamM = false;
-            conqueredByTeamA = false;
+            conqueredByTeamML = false;
+            conqueredByTeamGOAP = false;
             changeColorToDefault();
         }
     }
 
 
-    void changeAreaToTeamM()
+    void changeAreaToTeamML()
     {
-        if (!conqueredByTeamM)
+        if (!conqueredByTeamML)
         {
-            Debug.Log(this.gameObject.tag + " changeAreaToTeamM");
+            Debug.Log(this.gameObject.tag + " changeAreaToTeamML");
             conqueredByNone = false;
-            conqueredByTeamM = true;
-            conqueredByTeamA = false;
-            changeColorToTeamM();
+            conqueredByTeamML = true;
+            conqueredByTeamGOAP = false;
+            changeColorToTeamML();
             masterAreaControl.NotifyAreaChanged();
 
-            //TODO FIX REWARD AGENT
-            //MMonsterAgent mAgent = gObj.GetComponentInChildren<MMonsterAgent>();
-            //if (mAgent != null)
-            //    mAgent.RewardAgentForConqueringArea();
+            //TODO really reward all?
+            List<GameObject> teamMMonsters = teamMLController.teamMonsterList;
+            foreach (GameObject mMonsterEntity in teamMMonsters)
+            {
+                MLMonsterAgent mlAgent = mMonsterEntity.GetComponentInChildren<MLMonsterAgent>();
+                if (mlAgent != null)
+                    mlAgent.RewardAgentForConqueringArea();
+            }
         }
     }
 
-    void changeAreaToTeamA()
+    void changeAreaToTeamGOAP()
     {
-        if (!conqueredByTeamA)
+        if (!conqueredByTeamGOAP)
         {
-            Debug.Log(this.gameObject.tag + " changeAreaToTeamA");
+            Debug.Log(this.gameObject.tag + " changeAreaToTeamGOAP");
             conqueredByNone = false;
-            conqueredByTeamM = false;
-            conqueredByTeamA = true;
-            changeColorToTeamA();
+            conqueredByTeamML = false;
+            conqueredByTeamGOAP = true;
+            changeColorToTeamGOAP();
             masterAreaControl.NotifyAreaChanged();
         }
     }
 
-    public void changeColorToTeamM()
+    public void changeColorToTeamML()
     {
-        this.gameObject.GetComponent<Renderer>().material = teamMmaterial;
-        westLine.GetComponent<Renderer>().material = teamMmaterial;
+        this.gameObject.GetComponent<Renderer>().material = teamMLMaterial;
+        westLine.GetComponent<Renderer>().material = teamMLMaterial;
         eastLine.GetComponent<Renderer>().material = defaultMaterial;
     }
 
-    public void changeColorToTeamA()
+    public void changeColorToTeamGOAP()
     {
-        this.gameObject.GetComponent<Renderer>().material = teamAmaterial;
-        eastLine.GetComponent<Renderer>().material = teamAmaterial;
+        this.gameObject.GetComponent<Renderer>().material = teamGOAPMaterial;
+        eastLine.GetComponent<Renderer>().material = teamGOAPMaterial;
         westLine.GetComponent<Renderer>().material = defaultMaterial;
     }
 

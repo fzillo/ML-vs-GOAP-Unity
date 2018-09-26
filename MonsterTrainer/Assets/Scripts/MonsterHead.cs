@@ -7,7 +7,7 @@ public class MonsterHead : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        //avoids that method gets called twice on Gameobject mHead or aHead,
+        //avoids that method gets called twice on Gameobject mlMonsterHead or goapMonsterHead,
         //(because it has two Colliders - one Trigger, one not)
         if (col.isTrigger)
         {
@@ -15,43 +15,45 @@ public class MonsterHead : MonoBehaviour
         }
 
         Debug.Log("Hit! " + col.gameObject);
-        if (this.gameObject.tag == "mHead")
+        if (this.gameObject.tag == "mlMonsterHead")
         {
-            if (col.gameObject.tag == "aMonster")
+            if (col.gameObject.tag == "goapMonster")
             {
                 //get knocked and damaged
-                Vector3 vect = col.gameObject.GetComponentInParent<Rigidbody>().transform.position - this.GetComponentInParent<Rigidbody>().transform.position;
-                col.gameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized, true);
-                //Rewarding Agent
-                this.gameObject.GetComponentInParent<MMonsterAgent>().RewardAgentForDamagingEnemy();
+                knockCollidingGameObject(col.gameObject, true);
+
+                //Rewarding MLAgent
+                this.gameObject.GetComponentInParent<MLMonsterAgent>().RewardAgentForDamagingEnemy();
             }
-            else if (col.gameObject.tag == "aHead")
+            else if (col.gameObject.tag == "goapMonsterHead")
             {
                 //get knocked
-                Vector3 vect = col.gameObject.GetComponentInParent<Rigidbody>().transform.position - this.GetComponentInParent<Rigidbody>().transform.position;
-                col.gameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized, false);
+                knockCollidingGameObject(col.gameObject, false);
 
-                //Rewarding Agent
-                this.gameObject.GetComponentInParent<MMonsterAgent>().RewardAgentForKnockingEnemy();
+                //Rewarding MLAgent
+                this.gameObject.GetComponentInParent<MLMonsterAgent>().RewardAgentForKnockingEnemy();
             }
 
         }
 
-        //TODO refactor this duplicate code!
-        if (this.gameObject.tag == "aHead")
+        if (this.gameObject.tag == "goapMonsterHead")
         {
-            if (col.gameObject.tag == "mMonster")
+            if (col.gameObject.tag == "mlMonster")
             {
                 //get knocked and damaged
-                Vector3 vect = col.gameObject.GetComponentInParent<Rigidbody>().transform.position - this.GetComponentInParent<Rigidbody>().transform.position;
-                col.gameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized, true);
+                knockCollidingGameObject(col.gameObject, true);
             }
-            else if (col.gameObject.tag == "mHead")
+            else if (col.gameObject.tag == "mlMonsterHead")
             {
                 //get knocked
-                Vector3 vect = col.gameObject.GetComponentInParent<Rigidbody>().transform.position - this.GetComponentInParent<Rigidbody>().transform.position;
-                col.gameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized, false);
+                knockCollidingGameObject(col.gameObject, false);
             }
         }
+    }
+
+    void knockCollidingGameObject(GameObject collidingGameObject, bool takeDamage)
+    {
+        Vector3 vect = collidingGameObject.GetComponentInParent<Rigidbody>().transform.position - this.GetComponentInParent<Rigidbody>().transform.position;
+        collidingGameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized, takeDamage);
     }
 }

@@ -8,14 +8,14 @@ TagManager:
   - deadzone
   - areasouth
   - areanorth
-  - mMonster
-  - aMonster
-  - startZoneM
-  - startZoneA
-  - mBomb
-  - aBomb
-  - mHead
-  - aHead
+  - mlMonster
+  - goapMonster
+  - teamMLStartZone
+  - teamGOAPStartZone
+  - teamMLBomb
+  - teamGOAPBomb
+  - mlMonsterHead
+  - goapMonsterHead
   layers:
   - Default
   - TransparentFX

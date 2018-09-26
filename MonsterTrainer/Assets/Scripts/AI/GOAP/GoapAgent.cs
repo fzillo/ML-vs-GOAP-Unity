@@ -212,17 +212,12 @@ public sealed class GoapAgent : MonoBehaviour
 
 
     //ADDED BY FZ
-    //TODO DEBUGGEN
     public void CancelPlan()
     {
         while (!stateMachine.IsStackEmpty())
         {
             stateMachine.popState();
         }
-        /*if (!stateMachine.IsStackEmpty())
-            stateMachine.popState(); // move
-        if (!stateMachine.IsStackEmpty())
-            stateMachine.popState(); // perform*/
         stateMachine.pushState(idleState);
         Debug.Log("PLAN CANCELLED!");
         dataProvider.ActionsFinished();

@@ -16,7 +16,6 @@ public class DeliverBombAction : GoapAction
     {
         addPrecondition("bombPickedUp", true);
         addEffect("doJob", true);
-        //addEffect("bombDelivered", true);
         name = "DeliverBombAction";
     }
 

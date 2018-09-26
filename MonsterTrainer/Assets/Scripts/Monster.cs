@@ -15,7 +15,6 @@ public class Monster : MonoBehaviour
     GameParameters gParameters;
 
     Rigidbody monsterRB;
-    //GameObject monsterGO;
 
 
 
@@ -23,15 +22,6 @@ public class Monster : MonoBehaviour
     {
         gParameters = FindObjectOfType<GameParameters>();
         monsterRB = GetComponent<Rigidbody>();
-        //monsterGO = this.gameObject;
-
-        /*
-        if (monsterGO.activeInHierarchy)
-        {
-            deactivatedAtStart = false;
-            Debug.Log(this.gameObject + " deactivatedAtStart " + deactivatedAtStart);
-        }
-        */
 
         isAlive = true;
         hasBomb = false;
@@ -47,11 +37,9 @@ public class Monster : MonoBehaviour
     {
         if (col.gameObject.tag == "deadzone")
         {
-            //PunishAgentForDying(); //TODO activate this again
 
             Debug.Log("Deadzone!");
             DieAndRespawn();
-            //academy.Done();
         }
     }
 
@@ -80,23 +68,10 @@ public class Monster : MonoBehaviour
 
         transform.Rotate(rotateDir, Time.deltaTime * gParameters.monsterRotationSpeed);
         monsterRB.AddForce(dirToGo,
-        //ForceMode.Impulse //auch nicht schlecht!
+        //ForceMode.Impulse //TODO? isn't bad either!
         ForceMode.VelocityChange
         );
     }
-
-    /*
-    public void Shoot(bool shootBool)
-    {
-        if (shootBool)
-        {
-            Vector3 position = transform.forward * 20f;
-            //transform.TransformDirection(PolarToCartesian(rayDistance, angle));
-            Debug.DrawRay(transform.position, position, Color.red, 1f, true);
-            Debug.Log("Pew");
-        }
-    }
-    */
 
     public void GetDamaged()
     {
@@ -128,6 +103,10 @@ public class Monster : MonoBehaviour
 
     public void DieAndRespawn()
     {
+        MLMonsterAgent mlAgent = this.gameObject.GetComponentInParent<MLMonsterAgent>();
+        if (mlAgent != null)
+            mlAgent.PunishAgentForDying();
+
         if (hasBomb)
         {
             GameObject attachedBomb = tControler.teamBomb;
@@ -135,8 +114,6 @@ public class Monster : MonoBehaviour
             bombEntity.ResetBombMidGame();
             hasBomb = false;
         }
-
-        monsterRB.transform.position = new Vector3(0, -10, 0); //TODO remove
 
         isAlive = false;
         this.gameObject.SetActive(false);
@@ -155,9 +132,9 @@ public class Monster : MonoBehaviour
         this.gameObject.SetActive(true);
         hasBomb = false;
         isAlive = true;
-        AMonsterAgent goapAgent = GetComponent<AMonsterAgent>();
-        Debug.Log("AGENT CANCEL PLAN" + goapAgent);
 
+        //GOAP
+        GOAPMonsterAgent goapAgent = GetComponent<GOAPMonsterAgent>();
         if (goapAgent != null)
         {
             goapAgent.CancelPlan();

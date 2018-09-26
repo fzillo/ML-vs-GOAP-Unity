@@ -4,48 +4,42 @@ using UnityEngine;
 
 public class StartPositionGenerator : MonoBehaviour
 {
-    public List<GameObject> monsterGameobjectsTeamM;
-    public List<GameObject> monsterGameobjectsTeamA;
+    public List<GameObject> monsterGameobjectsTeamML;
+    public List<GameObject> monsterGameobjectsTeamGOAP;
 
-    List<Vector3> startPositionsTeamM = new List<Vector3>();
-    List<Vector3> startPositionsTeamA = new List<Vector3>();
+    List<Vector3> startPositionsTeamML = new List<Vector3>();
+    List<Vector3> startPositionsTeamGOAP = new List<Vector3>();
 
-    Quaternion startRotationTeamM = new Quaternion(0, 0, 0, 0);
-    Quaternion startRotationTeamA = new Quaternion(0, 0, 0, 0);
+    Quaternion startRotationTeamML = new Quaternion(0, 0, 0, 0);
+    Quaternion startRotationTeamGOAP = new Quaternion(0, 0, 0, 0);
 
-    public TeamController teamMController;
-    public TeamController teamAController;
+    public TeamController teamMLController;
+    public TeamController teamGOAPController;
 
 
-    int listIndexTeamM = 0;
-    int listIndexTeamA = 0;
+    int listIndexTeamML = 0;
+    int listIndexTeamGOAP = 0;
 
     bool startPositionsInitialized = false;
 
 
     void Start()
     {
-        /*
-        //TODO this needs to happen before Academy starts
-        monsterGameobjectsTeamM = new List<GameObject>(teamMController.teamMonsterList);
-        Debug.Log("monsterGameobjectsTeamM.Count :" + monsterGameobjectsTeamM.Count);
-        monsterGameobjectsTeamA = new List<GameObject>(teamAController.teamMonsterList);
-        Debug.Log("monsterGameobjectsTeamA.Count :" + monsterGameobjectsTeamA.Count);
-        */
+
     }
 
     public void AssignRandomStartPositionsForAllMonsters()
     {
         RandomizePositions();
 
-        foreach (GameObject monsterM in monsterGameobjectsTeamM)
+        foreach (GameObject monsterML in monsterGameobjectsTeamML)
         {
-            if (listIndexTeamM < startPositionsTeamM.Count)
+            if (listIndexTeamML < startPositionsTeamML.Count)
             {
-                monsterM.transform.position = startPositionsTeamM[listIndexTeamM++];
-                monsterM.transform.rotation = startRotationTeamM;
+                monsterML.transform.position = startPositionsTeamML[listIndexTeamML++];
+                monsterML.transform.rotation = startRotationTeamML;
 
-                Rigidbody rb = monsterM.GetComponent<Rigidbody>();
+                Rigidbody rb = monsterML.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
                     rb.velocity = Vector3.zero;
@@ -54,14 +48,14 @@ public class StartPositionGenerator : MonoBehaviour
             }
         }
 
-        foreach (GameObject monsterA in monsterGameobjectsTeamA)
+        foreach (GameObject monsterGOAP in monsterGameobjectsTeamGOAP)
         {
-            if (listIndexTeamA < startPositionsTeamA.Count)
+            if (listIndexTeamGOAP < startPositionsTeamGOAP.Count)
             {
-                monsterA.transform.position = startPositionsTeamA[listIndexTeamA++];
-                monsterA.transform.rotation = startRotationTeamA;
+                monsterGOAP.transform.position = startPositionsTeamGOAP[listIndexTeamGOAP++];
+                monsterGOAP.transform.rotation = startRotationTeamGOAP;
 
-                Rigidbody rb = monsterA.GetComponent<Rigidbody>();
+                Rigidbody rb = monsterGOAP.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
                     rb.velocity = Vector3.zero;
@@ -78,24 +72,24 @@ public class StartPositionGenerator : MonoBehaviour
         //only once at start!
         if (!startPositionsInitialized)
         {
-            foreach (GameObject monsterM in monsterGameobjectsTeamM)
+            foreach (GameObject monsterML in monsterGameobjectsTeamML)
             {
-                startPositionsTeamM.Add(monsterM.transform.position);
+                startPositionsTeamML.Add(monsterML.transform.position);
             }
-            foreach (GameObject monsterA in monsterGameobjectsTeamA)
+            foreach (GameObject monsterGOAP in monsterGameobjectsTeamGOAP)
             {
-                startPositionsTeamA.Add(monsterA.transform.position);
+                startPositionsTeamGOAP.Add(monsterGOAP.transform.position);
             }
             startPositionsInitialized = true;
         }
 
         //shuffle Positions
-        KnuthShuffle(startPositionsTeamM);
-        KnuthShuffle(startPositionsTeamA);
+        KnuthShuffle(startPositionsTeamML);
+        KnuthShuffle(startPositionsTeamGOAP);
 
         //reset Index
-        listIndexTeamM = 0;
-        listIndexTeamA = 0;
+        listIndexTeamML = 0;
+        listIndexTeamGOAP = 0;
     }
 
 
@@ -118,17 +112,17 @@ public class StartPositionGenerator : MonoBehaviour
         Rigidbody monsterRB = monsterEntity.GetComponent<Rigidbody>();
         monsterRB.velocity = Vector3.zero;
         monsterRB.angularVelocity = Vector3.zero;
-        if (monsterEntity.tag == "mMonster")
+        if (monsterEntity.tag == "mlMonster")
         {
-            int randomIndex = Random.Range(0, startPositionsTeamM.Count - 1);
-            monsterRB.transform.position = startPositionsTeamM[randomIndex];
-            monsterRB.transform.rotation = startRotationTeamM;
+            int randomIndex = Random.Range(0, startPositionsTeamML.Count - 1);
+            monsterRB.transform.position = startPositionsTeamML[randomIndex];
+            monsterRB.transform.rotation = startRotationTeamML;
         }
-        else if (monsterEntity.tag == "aMonster")
+        else if (monsterEntity.tag == "goapMonster")
         {
-            int randomIndex = Random.Range(0, startPositionsTeamA.Count - 1);
-            monsterRB.transform.position = startPositionsTeamA[randomIndex];
-            monsterRB.transform.rotation = startRotationTeamM;
+            int randomIndex = Random.Range(0, startPositionsTeamGOAP.Count - 1);
+            monsterRB.transform.position = startPositionsTeamGOAP[randomIndex];
+            monsterRB.transform.rotation = startRotationTeamGOAP;
         }
     }
 }

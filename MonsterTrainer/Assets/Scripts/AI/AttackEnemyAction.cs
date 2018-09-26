@@ -13,7 +13,6 @@ public class AttackEnemyAction : GoapAction
     public AttackEnemyAction()
     {
         addPrecondition("isReady", true);
-        //addPrecondition("areasConquered", true);
         addEffect("doJob", true);
         name = "AttackEnemyAction";
     }

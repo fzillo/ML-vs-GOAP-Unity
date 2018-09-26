@@ -10,12 +10,10 @@ public class DefendAreaAction : GoapAction
     AreaController[] areas;
     private AreaController targetArea;
 
-    //TODO zentral Verwalten
     public Bomb teamBomb;
 
     public DefendAreaAction()
     {
-        //addPrecondition("areasConquered", true);
         addPrecondition("bombActive", false);
         addEffect("doJob", true);
         name = "DefendAreaAction";
@@ -49,7 +47,7 @@ public class DefendAreaAction : GoapAction
         foreach (AreaController area in areas)
         {
             //difference to conquer-action
-            if (!area.conqueredByTeamA)
+            if (!area.conqueredByTeamGOAP)
             {
                 continue;
             }
@@ -89,7 +87,7 @@ public class DefendAreaAction : GoapAction
             startTime = Time.time;
         }
 
-        if (!target.GetComponent<AreaController>().conqueredByTeamA || teamBomb.isPickedUp)
+        if (!target.GetComponent<AreaController>().conqueredByTeamGOAP || teamBomb.isPickedUp)
         {
             Debug.Log("Finished: " + name);
             completed = true;

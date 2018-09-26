@@ -15,7 +15,6 @@ public class ConquerAreaAction : GoapAction
     {
         addPrecondition("isReady", true);
         addPrecondition("bombActive", false);
-        //addEffect("conquerAreas", true);
         addEffect("doJob", true);
         name = "ConquerAreaAction";
     }
@@ -49,7 +48,7 @@ public class ConquerAreaAction : GoapAction
 
         foreach (AreaController area in areas)
         {
-            if (area.conqueredByTeamA) //TODO Testen!
+            if (area.conqueredByTeamGOAP)
             {
                 continue;
             }
@@ -88,7 +87,7 @@ public class ConquerAreaAction : GoapAction
             startTime = Time.time;
         }
 
-        if (target.GetComponent<AreaController>().conqueredByTeamA)
+        if (target.GetComponent<AreaController>().conqueredByTeamGOAP)
         {
             Debug.Log("Finished: " + name);
             completed = true;

@@ -6,13 +6,15 @@ public class GameController : MonoBehaviour
 {
     /*
     TODO LIST
-    - Find all Entities in Initialization
-    - port to ml v0.5
+    - ML Training!
+    - implement curriculum learning plan
     - get multibrain to work
-    - fix reward/punish for mlagents
+    - standardize movement between mlMonsters(custom) and goapMonsters(navMeshAgent)
     - calculate goap costs dynamically
     ~ attack more persistently
     ~ AMonsterAgent MoveAgent() -> should check if preconditions are still true
+    ~ include ml-agents in git?
+    ~ Find all Entities in Initialization?
      */
 
 
@@ -21,8 +23,8 @@ public class GameController : MonoBehaviour
     StartPositionGenerator startPosGenerator;
     MasterAreaController masterAreaControl;
 
-    TeamController teamMController;
-    TeamController teamAController;
+    TeamController teamMLController;
+    TeamController teamGOAPController;
 
     // Use this for initialization
     void Start()
@@ -38,15 +40,15 @@ public class GameController : MonoBehaviour
 
     private void AssignObjects()
     {
-        if (masterAreaControl == null || startPosGenerator == null || teamMController == null || teamAController == null)
+        if (masterAreaControl == null || startPosGenerator == null || teamMLController == null || teamGOAPController == null)
         {
             masterAreaControl = FindObjectOfType<MasterAreaController>();
             startPosGenerator = FindObjectOfType<StartPositionGenerator>();
 
-            GameObject teamMControllerGameObject = GameObject.Find("TeamMController");
-            GameObject teamAControllerGameObject = GameObject.Find("TeamAController");
-            teamMController = teamMControllerGameObject.GetComponent<TeamController>();
-            teamAController = teamAControllerGameObject.GetComponent<TeamController>();
+            GameObject teamMLControllerGameObject = GameObject.Find("TeamMLController");
+            GameObject teamGOAPControllerGameObject = GameObject.Find("TeamGOAPController");
+            teamMLController = teamMLControllerGameObject.GetComponent<TeamController>();
+            teamGOAPController = teamGOAPControllerGameObject.GetComponent<TeamController>();
         }
     }
 
@@ -60,7 +62,7 @@ public class GameController : MonoBehaviour
     {
         startPosGenerator.AssignRandomStartPositionsForAllMonsters();
         masterAreaControl.ResetAllAreas();
-        teamMController.ResetAllMonsters();
-        teamAController.ResetAllMonsters();
+        teamMLController.ResetAllMonsters();
+        teamGOAPController.ResetAllMonsters();
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MLAgents;
 
-public class MMonsterAgent : Agent
+public class MLMonsterAgent : Agent
 {
     MonsterTrainerAcademy academy;
     MasterAreaController masterAreaControl;
@@ -27,41 +27,28 @@ public class MMonsterAgent : Agent
         float[] rayAngles = { 20f, 90f, 160f, 45f, 135f, 70f, 110f };
 
         //TODO disable DebugRaycasting or use less RayPerceptions for more Performance!
-        string[] detectableObjects = { "deadzone", "areanorth", "areasouth", "startZoneM", "startZoneA", "mBomb", "aBomb", "mMonster", "aMonster", "mHead", "aHead" };
+        string[] detectableObjects = { "deadzone", "areanorth", "areasouth", "teamMLStartZone", "teamGOAPStartZone", "teamMLBomb", "teamGOAPBomb", "mlMonster", "goapMonster", "mlMonsterHead", "goapMonsterHead" };
         AddVectorObs(rayPer.Perceive(2f, rayAngles, detectableObjects, 0f, 2.5f));
         AddVectorObs(rayPer.Perceive(rayDistance, rayAngles, detectableObjects, 0f, 0f));
         AddVectorObs(rayPer.Perceive(10f, rayAngles, detectableObjects, 0f, -1f));
         AddVectorObs(rayPer.Perceive(2f, rayAngles, detectableObjects, 0f, -2.5f));
         AddVectorObs(rayPer.Perceive(1f, rayAngles, detectableObjects, 0f, -5f));
-        AddVectorObs(masterAreaControl.areaNorth.conqueredByTeamM);
-        AddVectorObs(masterAreaControl.areaSouth.conqueredByTeamM);
-        AddVectorObs(masterAreaControl.areaNorth.conqueredByTeamA);
-        AddVectorObs(masterAreaControl.areaSouth.conqueredByTeamA);
+        AddVectorObs(masterAreaControl.areaNorth.conqueredByTeamML);
+        AddVectorObs(masterAreaControl.areaSouth.conqueredByTeamML);
+        AddVectorObs(masterAreaControl.areaNorth.conqueredByTeamGOAP);
+        AddVectorObs(masterAreaControl.areaSouth.conqueredByTeamGOAP);
         AddVectorObs(this.GetComponentInParent<Monster>().hasBomb);
         AddVectorObs(transform.InverseTransformDirection(monsterRB.velocity));
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
-        //Existential Malus, so it does something
+        //Existential Punishment, implemented to keep the Agent from slacking off
         PunishAgentForExisting();
 
         Move(vectorAction);
 
     }
-
-    /* 
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.tag == "deadzone")
-        {
-            PunishAgentForDying();
-
-            Debug.Log("Dead!");
-            academy.Done();
-        }
-    }
-    */
 
     public override void AgentReset()
     {
@@ -75,7 +62,6 @@ public class MMonsterAgent : Agent
         float dirX = 0;
         float rotY = 0;
         float dirZ = 0;
-        //bool shootBool = false;
 
         switch (action)
         {
@@ -99,54 +85,68 @@ public class MMonsterAgent : Agent
             case 6:
                 dirX = -1f;
                 break;
-                //case 7:
-                //    shootBool = true;
-                //    break;
         }
         thisMonster.Move(dirX, rotY, dirZ);
-        //thisMonster.Shoot(shootBool);
     }
 
 
     public void RewardAgentForKnockingEnemy()
     {
-        AddReward(0.1f);
-        Debug.Log("RewardAgentForKnockingEnemy 0.1f " + this.gameObject.tag);
+        AddReward(academy.rewardForKnockingEnemy);
+        Debug.Log("RewardAgentForKnockingEnemy " + academy.rewardForKnockingEnemy + " " + this.gameObject);
     }
 
     public void RewardAgentForDamagingEnemy()
     {
-        AddReward(0.3f);
-        Debug.Log("RewardAgentForDamagingEnemy 0.3f " + this.gameObject.tag);
+        AddReward(academy.rewardForDamagingEnemy);
+        Debug.Log("RewardAgentForDamagingEnemy " + academy.rewardForDamagingEnemy + " " + this.gameObject);
     }
 
     public void RewardAgentForConqueringArea()
     {
-        AddReward(1f);
-        Debug.Log("RewardAgentForConqueringArea 1f " + this.gameObject.tag);
+        AddReward(academy.rewardForConqueringArea);
+        Debug.Log("RewardAgentForConqueringArea " + academy.rewardForConqueringArea + " " + this.gameObject);
     }
 
     public void RewardAgentForPickingUpBomb()
     {
-        AddReward(1f);
-        Debug.Log("RewardAgentForPickingUpBomb 1f " + this.gameObject.tag);
+        AddReward(academy.rewardForPickingUpBomb);
+        Debug.Log("RewardAgentForPickingUpBomb " + academy.rewardForPickingUpBomb + " " + this.gameObject);
+    }
+
+    public void PunishAgentForLosingBomb()
+    {
+        AddReward(academy.punishmentForLosingBomb);
+        Debug.Log("PunishAgentForLosingBomb " + academy.punishmentForLosingBomb + " " + this.gameObject);
     }
 
     public void RewardAgentForDetonatingBomb()
     {
-        AddReward(2f);
-        Debug.Log("RewardAgentForDetonatingBomb 2f " + this.gameObject.tag);
+        AddReward(academy.rewardForDetonatingBomb);
+        Debug.Log("RewardAgentForDetonatingBomb" + academy.rewardForDetonatingBomb + " " + this.gameObject);
     }
 
     public void PunishAgentForExisting()
     {
-        AddReward(-1f / 3000);
-        //Debug.Log("RewardAgentForExisting -1f / 3000f " + this.gameObject.tag);
+        AddReward(academy.punishmentForExisting);
+        //Debug.Log("PunishAgentForExisting " + academy.punishmentForExisting + " " + this.gameObject);
     }
 
     public void PunishAgentForDying()
     {
-        AddReward(-5f);
-        Debug.Log("RewardAgentForDying -5f " + this.gameObject.tag);
+        AddReward(academy.punishmentForDying);
+        Debug.Log("PunishAgentForDying " + academy.punishmentForDying + " " + this.gameObject);
+    }
+
+    public void RewardAgentForWinning()
+    {
+        AddReward(academy.rewardForWinning);
+        Debug.Log("RewardAgentForWinning " + academy.rewardForWinning + " " + this.gameObject);
+    }
+
+    public void PunishAgentForLosing()
+    {
+        AddReward(academy.punishmentForLosing);
+        Debug.Log("PunishAgentForLosing " + academy.punishmentForLosing + " " + this.gameObject);
     }
 }

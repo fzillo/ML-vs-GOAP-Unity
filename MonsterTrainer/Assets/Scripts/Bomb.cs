@@ -49,17 +49,19 @@ public class Bomb : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if ((this.gameObject.tag == "mBomb" && col.gameObject.tag == "mMonster")
-        || (this.gameObject.tag == "aBomb" && col.gameObject.tag == "aMonster"))
+        if ((this.gameObject.tag == "teamMLBomb" && col.gameObject.tag == "mlMonster")
+        || (this.gameObject.tag == "teamGOAPBomb" && col.gameObject.tag == "goapMonster"))
         {
             attachedToGO = col.gameObject;
             attachedToGO.GetComponentInChildren<Monster>().SetHasBomb(true);
             isPickedUp = true;
 
             //Rewarding Agent
-            MMonsterAgent mAgent = attachedToGO.GetComponentInChildren<MMonsterAgent>();
-            if (mAgent != null)
-                mAgent.RewardAgentForPickingUpBomb();
+            MLMonsterAgent mlAgent = attachedToGO.GetComponentInChildren<MLMonsterAgent>();
+            if (mlAgent != null)
+            {
+                mlAgent.RewardAgentForPickingUpBomb();
+            }
         }
     }
 
@@ -67,7 +69,7 @@ public class Bomb : MonoBehaviour
     {
         this.gameObject.SetActive(true);
         hasSpawned = true;
-        Debug.Log("Activate Bomb " + this.gameObject.tag + " at " + startPos + " hasSpawned " + hasSpawned);
+        Debug.Log("Activate Bomb " + this.gameObject + " at " + startPos + " hasSpawned " + hasSpawned);
     }
 
     public void DetonateBomb()
@@ -76,9 +78,11 @@ public class Bomb : MonoBehaviour
         isDetonated = true;
 
         //Rewarding Agent
-        MMonsterAgent mAgent = attachedToGO.GetComponentInChildren<MMonsterAgent>();
-        if (mAgent != null)
-            mAgent.RewardAgentForDetonatingBomb();
+        MLMonsterAgent mlAgent = attachedToGO.GetComponentInChildren<MLMonsterAgent>();
+        if (mlAgent != null)
+        {
+            mlAgent.RewardAgentForDetonatingBomb();
+        }
     }
 
     public void ResetBomb()
@@ -96,27 +100,32 @@ public class Bomb : MonoBehaviour
         hasSpawned = false;
     }
 
-    //TODO Refactor
     public void ResetBombMidGame()
     {
-        //TODO ResetTimer?
         if (attachedToGO != null)
         {
+            //Punishing Agent
+            MLMonsterAgent mlAgent = attachedToGO.GetComponentInChildren<MLMonsterAgent>();
+            if (mlAgent != null)
+            {
+                mlAgent.PunishAgentForLosingBomb();
+            }
+
             attachedToGO.GetComponentInChildren<Monster>().SetHasBomb(false);
             attachedToGO = null;
         }
 
-        if (this.tag == "mBomb")
+        if (this.tag == "teamMLBomb")
         {
-            if (!(masterAreaControllerInstance.areaNorth.conqueredByTeamM && masterAreaControllerInstance.areaSouth.conqueredByTeamM))
+            if (!(masterAreaControllerInstance.areaNorth.conqueredByTeamML && masterAreaControllerInstance.areaSouth.conqueredByTeamML))
             {
 
                 this.gameObject.SetActive(false);
             }
         }
-        else if (this.tag == "aBomb")
+        else if (this.tag == "teamGOAPBomb")
         {
-            if (!(masterAreaControllerInstance.areaNorth.conqueredByTeamA && masterAreaControllerInstance.areaSouth.conqueredByTeamA))
+            if (!(masterAreaControllerInstance.areaNorth.conqueredByTeamGOAP && masterAreaControllerInstance.areaSouth.conqueredByTeamGOAP))
             {
 
                 this.gameObject.SetActive(false);

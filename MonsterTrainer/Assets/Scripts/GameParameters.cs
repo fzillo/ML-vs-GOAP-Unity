@@ -14,15 +14,4 @@ public class GameParameters : MonoBehaviour
     public int respawnTime = 3;
 
     public float knockBackMultiplier = 10f;
-
-    //this is with Rigidbody.Translate()
-    //public float monsterSpeed = 10f;
-    //public float monsterSpeedModifierSidewaysAndBack = 0.7f;
-    //public float monsterRotationSpeed = 5f;
-
-    //public float monsterHealth = 100f;
-    //public float monsterBaseDamage = 40f;
-    //public int monsterDamageModifierEffective = 2;
-    //public int monsterDamageModifierIneffective = 1 / 2;
-    //public int secondsToWin = 5;
 }
