@@ -107,6 +107,11 @@ public class AreaController : MonoBehaviour
             List<GameObject> teamMMonsters = teamMLController.teamMonsterList;
             foreach (GameObject mMonsterEntity in teamMMonsters)
             {
+                if (!mMonsterEntity.activeInHierarchy)
+                {
+                    continue;
+                }
+
                 MLMonsterAgent mlAgent = mMonsterEntity.GetComponentInChildren<MLMonsterAgent>();
                 if (mlAgent != null)
                     mlAgent.RewardAgentForConqueringArea();

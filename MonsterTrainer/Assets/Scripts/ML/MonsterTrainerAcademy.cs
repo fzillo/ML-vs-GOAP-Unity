@@ -7,17 +7,18 @@ public class MonsterTrainerAcademy : Academy
 {
     GameController gameControllerInstance;
 
-    public float rewardForKnockingEnemy = 0.01f;
-    public float rewardForDamagingEnemy = 0.03f;
-    public float rewardForConqueringArea = 0.1f;
-    public float rewardForPickingUpBomb = 0.1f;
+    public float rewardForKnockingEnemy = 0.1f;
+    public float rewardForDamagingEnemy = 0.1f;
+    public float rewardForConqueringArea = 0.25f;
+    public float rewardForPickingUpBomb = 0.25f;
     public float rewardForDetonatingBomb = 0.2f;
-    public float rewardForWinning = 0.25f;
+    public float rewardForWinning = 1f;
+    public float rewardForMovingForward = 2f / 5000f;
 
-    public float punishmentForExisting = -1f / 30000f;
+    public float punishmentForExisting = -1f / 50000f;
     public float punishmentForDying = -0.5f;
-    public float punishmentForLosingBomb = -0.05f;
-    public float punishmentForLosing = -0.25f;
+    public float punishmentForLosingBomb = -0.2f;
+    public float punishmentForLosing = -0.2f;
 
     public override void InitializeAcademy()
     {

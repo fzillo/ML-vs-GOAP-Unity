@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     - get multibrain to work
     - standardize movement between mlMonsters(custom) and goapMonsters(navMeshAgent)
     - calculate goap costs dynamically
+    - bug: sometimes it resets twice after death
     ~ attack more persistently
     ~ AMonsterAgent MoveAgent() -> should check if preconditions are still true
     ~ include ml-agents in git?

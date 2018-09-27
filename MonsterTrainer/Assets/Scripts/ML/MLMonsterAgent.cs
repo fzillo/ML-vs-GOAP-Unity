@@ -23,22 +23,20 @@ public class MLMonsterAgent : Agent
 
     public override void CollectObservations()
     {
-        const float rayDistance = 35f;
         float[] rayAngles = { 20f, 90f, 160f, 45f, 135f, 70f, 110f };
+        float[] rayAngles2 = { 45f, 90f, 135f };
+        float[] rayAngles3 = { 90f };
 
         //TODO disable DebugRaycasting or use less RayPerceptions for more Performance!
-        string[] detectableObjects = { "deadzone", "areanorth", "areasouth", "teamMLStartZone", "teamGOAPStartZone", "teamMLBomb", "teamGOAPBomb", "mlMonster", "goapMonster", "mlMonsterHead", "goapMonsterHead" };
-        AddVectorObs(rayPer.Perceive(2f, rayAngles, detectableObjects, 0f, 2.5f));
-        AddVectorObs(rayPer.Perceive(rayDistance, rayAngles, detectableObjects, 0f, 0f));
-        AddVectorObs(rayPer.Perceive(10f, rayAngles, detectableObjects, 0f, -1f));
-        AddVectorObs(rayPer.Perceive(2f, rayAngles, detectableObjects, 0f, -2.5f));
-        AddVectorObs(rayPer.Perceive(1f, rayAngles, detectableObjects, 0f, -5f));
+        string[] detectableObjects = { "teamMLBomb", "teamGOAPBomb", "mlMonster", "goapMonster", "mlMonsterHead", "goapMonsterHead" };
+        string[] detectableObjects2 = { "deadzone", "areanorth", "areasouth", "teamMLStartZone", "teamGOAPStartZone" };
+        AddVectorObs(rayPer.Perceive(35f, rayAngles, detectableObjects, 0f, 0f));
+        AddVectorObs(rayPer.Perceive(10f, rayAngles2, detectableObjects2, 0f, -1f));
+        AddVectorObs(rayPer.Perceive(1f, rayAngles3, detectableObjects2, 0f, -5f));
         AddVectorObs(masterAreaControl.areaNorth.conqueredByTeamML);
         AddVectorObs(masterAreaControl.areaSouth.conqueredByTeamML);
-        AddVectorObs(masterAreaControl.areaNorth.conqueredByTeamGOAP);
-        AddVectorObs(masterAreaControl.areaSouth.conqueredByTeamGOAP);
         AddVectorObs(this.GetComponentInParent<Monster>().hasBomb);
-        AddVectorObs(transform.InverseTransformDirection(monsterRB.velocity));
+        AddVectorObs(transform.InverseTransformDirection(monsterRB.velocity.normalized));
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)
@@ -69,6 +67,7 @@ public class MLMonsterAgent : Agent
                 break;
             case 1:
                 dirZ = 1f;
+                RewardAgentForMovingForward();
                 break;
             case 2:
                 dirZ = -1f;
@@ -148,5 +147,11 @@ public class MLMonsterAgent : Agent
     {
         AddReward(academy.punishmentForLosing);
         Debug.Log("PunishAgentForLosing " + academy.punishmentForLosing + " " + this.gameObject);
+    }
+
+    public void RewardAgentForMovingForward()
+    {
+        AddReward(academy.rewardForMovingForward);
+        Debug.Log("RewardAgentForMovingForward " + academy.rewardForMovingForward + " " + this.gameObject);
     }
 }

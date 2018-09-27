@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Monster : MonoBehaviour
 {
-    public TeamController tControler;
+    public TeamController thisTeamControler;
 
     public bool isAlive;
     public bool hasBomb;
@@ -109,7 +109,7 @@ public class Monster : MonoBehaviour
 
         if (hasBomb)
         {
-            GameObject attachedBomb = tControler.teamBomb;
+            GameObject attachedBomb = thisTeamControler.teamBomb;
             Bomb bombEntity = attachedBomb.GetComponent<Bomb>();
             bombEntity.ResetBombMidGame();
             hasBomb = false;
@@ -124,7 +124,7 @@ public class Monster : MonoBehaviour
     void WaitForRespawnInvoke()
     {
         Debug.Log("ACTIVE!");
-        tControler.RespawnMonster(this);
+        thisTeamControler.RespawnMonster(this);
     }
 
     public void Reset()
