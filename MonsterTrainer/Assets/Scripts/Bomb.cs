@@ -89,10 +89,13 @@ public class Bomb : MonoBehaviour
         isDetonated = true;
 
         //Rewarding Agent
-        MLMonsterAgent mlAgent = attachedToGO.GetComponentInChildren<MLMonsterAgent>();
-        if (mlAgent != null)
+        if (attachedToGO != null)
         {
-            mlAgent.RewardAgentForDetonatingBomb();
+            MLMonsterAgent mlAgent = attachedToGO.GetComponentInChildren<MLMonsterAgent>();
+            if (mlAgent != null)
+            {
+                mlAgent.RewardAgentForDetonatingBomb();
+            }
         }
     }
 
