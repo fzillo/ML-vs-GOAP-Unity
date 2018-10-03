@@ -6,7 +6,25 @@ using MLAgents;
 public class MonsterTrainerAcademy : Academy
 {
     GameController gameControllerInstance;
-    CurriculumController curriculum;
+
+    TeamController teamMLController;
+
+    public Brain brainToTrain;
+
+    public bool curriculumActive = false;
+
+
+    [HideInInspector]
+    public bool fullfillObjectivesCurriculum = false;
+    public enum TrainingPhasesFullfillObjectives { phaseConquerOneArea, phaseConquerBothAreas, phasePickupBomb, phaseDeliverBomb };
+
+    [HideInInspector]
+    public bool attackEnemyCurriculum = false;
+    public enum TrainingPhasesAttackEnemies { phaseStaticEnemies, phaseMovingEnemies, phaseAttackingEnemies };
+
+    [HideInInspector]
+    public int maximumPhase = 0;
+
 
     public float rewardForKnockingEnemy = 0.1f;
     public float rewardForDamagingEnemy = 0.1f;
@@ -23,29 +41,57 @@ public class MonsterTrainerAcademy : Academy
 
     public override void InitializeAcademy()
     {
-        curriculum = FindObjectOfType<CurriculumController>();
-        if (curriculum.curriculumActive)
-        {
-            curriculum.maximumPhase = (int)resetParameters["maximum_phase"];
-        }
 
         gameControllerInstance = FindObjectOfType<GameController>();
         Debug.Log("gameControllerInstance" + gameControllerInstance);
+
         gameControllerInstance.initializeGame();
+
+        GameObject teamMLControllerGameObject = GameObject.Find("TeamMLController");
+        teamMLController = teamMLControllerGameObject.GetComponent<TeamController>();
+
+        if (curriculumActive)
+        {
+            maximumPhase = (int)resetParameters["maximum_phase"];
+
+            fullfillObjectivesCurriculum = brainToTrain.tag.Equals("FullfillObjectiveBrain");
+            attackEnemyCurriculum = brainToTrain.tag.Equals("AttackEnemiesBrain");
+
+            List<GameObject> mlMonsters = teamMLController.teamMonsterList;
+
+            foreach (GameObject monsterGameObject in mlMonsters)
+            {
+                Monster monsterEntity = monsterGameObject.GetComponent<Monster>();
+                Debug.Log("!monsterEntity.deactivatedAtStart " + !monsterEntity.deactivatedAtStart + " monsterEntity " + monsterEntity);
+                if (!monsterEntity.deactivatedAtStart)
+                {
+                    MLMonsterAgent mlAgent = monsterGameObject.GetComponent<MLMonsterAgent>();
+                    mlAgent.brain = brainToTrain;
+                }
+            }
+        }
     }
 
     public override void AcademyReset()
     {
         gameControllerInstance.ResetGame();
 
-        if (curriculum.curriculumActive)
+        if (curriculumActive)
         {
-            curriculum.maximumPhase = (int)resetParameters["maximum_phase"];
+            maximumPhase = (int)resetParameters["maximum_phase"];
         }
     }
 
     public override void AcademyStep()
     {
+
+    }
+
+
+    public void SpawnTrainingDummiesInRandomIntervals(bool moving, bool attacking)
+    {
+        int nextSpawnInSteps = Random.Range(0, 1000);
+
 
     }
 }

@@ -6,15 +6,12 @@ public class GameController : MonoBehaviour
 {
     /*
     TODO LIST    
-    - implement curriculum learning plan
-    - learn how to use tensorflow learning graphs!
-    - bug! goap agents slow down together with mlagents
-    - allow mlAgents to move and rotate at the same time
-    - combat training / activating goap-agents
-    - get multibrain to work
+    - finish implementing attackenemies-curriculum
+    - bug bombcarrier switches on contact
     - calculate goap costs dynamically
     - bug: sometimes it resets twice after death
-    - bug: when trying to move left+back the monster spins - this seems to be caused by friction with arenabase 
+    - bug! goap agents slow down together with mlagents 
+    ~ bug: when trying to move left+back the monster spins - this seems to be caused by friction with arenabase
     ~ goap attack more persistently
     ~ goap AMonsterAgent MoveAgent() -> should check if preconditions are still true
     ~ include ml-agents in git?
@@ -59,14 +56,17 @@ public class GameController : MonoBehaviour
     public void initializeGame()
     {
         AssignObjects();
-        startPosGenerator.AssignRandomStartPositionsForAllMonsters();
+        teamMLController.SetStartPostitionsForAllMonster();
+        //startPosGenerator.AssignRandomStartPositionsForAllMonstersInStartzone();
     }
 
     public void ResetGame()
     {
-        startPosGenerator.AssignRandomStartPositionsForAllMonsters();
+        //startPosGenerator.AssignRandomStartPositionsForAllMonstersInStartzone();
         masterAreaControl.ResetAllAreas();
+        teamMLController.SetStartPostitionsForAllMonster();
         teamMLController.ResetAllMonsters();
+        teamGOAPController.SetStartPostitionsForAllMonster();
         teamGOAPController.ResetAllMonsters();
     }
 }

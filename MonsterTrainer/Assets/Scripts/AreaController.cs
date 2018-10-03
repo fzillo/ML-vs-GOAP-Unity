@@ -7,7 +7,6 @@ public class AreaController : MonoBehaviour
     MasterAreaController masterAreaControl;
 
     MonsterTrainerAcademy academy;
-    CurriculumController curriculum;
 
     //TODO remove here?
     TeamController teamMLController;
@@ -31,7 +30,6 @@ public class AreaController : MonoBehaviour
         masterAreaControl = FindObjectOfType<MasterAreaController>();
 
         academy = FindObjectOfType<MonsterTrainerAcademy>();
-        curriculum = FindObjectOfType<CurriculumController>();
 
         //we need teamMController for Rewards
         GameObject teamMControllerGameObject = GameObject.Find("TeamMLController");
@@ -123,7 +121,7 @@ public class AreaController : MonoBehaviour
                     mlAgent.RewardAgentForConqueringArea();
             }
 
-            if (curriculum.curriculumActive && curriculum.maximumPhase.Equals((int)CurriculumController.Phase.phaseConquerOneArea))
+            if (academy.curriculumActive && academy.maximumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phaseConquerOneArea))
             {
                 academy.Done();
             }

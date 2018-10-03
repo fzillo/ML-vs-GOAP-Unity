@@ -4,125 +4,95 @@ using UnityEngine;
 
 public class StartPositionGenerator : MonoBehaviour
 {
-    public List<GameObject> monsterGameobjectsTeamML;
-    public List<GameObject> monsterGameobjectsTeamGOAP;
-
-    List<Vector3> startPositionsTeamML = new List<Vector3>();
-    List<Vector3> startPositionsTeamGOAP = new List<Vector3>();
-
-    Quaternion startRotationTeamML = new Quaternion(0, 0, 0, 0);
-    Quaternion startRotationTeamGOAP = new Quaternion(0, 0, 0, 0);
-
-    public TeamController teamMLController;
-    public TeamController teamGOAPController;
-
-
-    int listIndexTeamML = 0;
-    int listIndexTeamGOAP = 0;
-
-    bool startPositionsInitialized = false;
-
+    public GameObject areaForRandomSpawning;
+    Bounds spawnAreaBounds;
 
     void Start()
     {
-
+        areaForRandomSpawning.SetActive(false);
     }
 
-    public void AssignRandomStartPositionsForAllMonsters()
+    public List<Vector3> GetStartPositions(List<GameObject> monsterGOList)
     {
-        RandomizePositions();
+        List<Vector3> positionList = new List<Vector3>();
 
-        foreach (GameObject monsterML in monsterGameobjectsTeamML)
+        foreach (GameObject monsterGO in monsterGOList)
         {
-            if (listIndexTeamML < startPositionsTeamML.Count)
-            {
-                monsterML.transform.position = startPositionsTeamML[listIndexTeamML++];
-                monsterML.transform.rotation = startRotationTeamML;
-
-                Rigidbody rb = monsterML.GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    rb.velocity = Vector3.zero;
-                    rb.angularVelocity = Vector3.zero;
-                }
-            }
+            positionList.Add(monsterGO.transform.position);
         }
 
-        foreach (GameObject monsterGOAP in monsterGameobjectsTeamGOAP)
-        {
-            if (listIndexTeamGOAP < startPositionsTeamGOAP.Count)
-            {
-                monsterGOAP.transform.position = startPositionsTeamGOAP[listIndexTeamGOAP++];
-                monsterGOAP.transform.rotation = startRotationTeamGOAP;
-
-                Rigidbody rb = monsterGOAP.GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    rb.velocity = Vector3.zero;
-                    rb.angularVelocity = Vector3.zero;
-                }
-            }
-        }
+        return positionList;
     }
 
-    public void RandomizePositions()
+    public void AssignRandomStartPositionsForAllMonsters(List<GameObject> monsterGOList, List<Vector3> positionList)
     {
-        Debug.Log(startPositionsInitialized);
+        RandomizePositions(positionList);
 
-        //only once at start!
-        if (!startPositionsInitialized)
+        int listIndex = 0;
+
+        foreach (GameObject monsterML in monsterGOList)
         {
-            foreach (GameObject monsterML in monsterGameobjectsTeamML)
+            if (listIndex < positionList.Count)
             {
-                startPositionsTeamML.Add(monsterML.transform.position);
+                Rigidbody monsterRB = monsterML.GetComponent<Rigidbody>();
+                monsterRB.transform.position = positionList[listIndex];
+                monsterRB.transform.rotation = new Quaternion(0, 0, 0, 0);
+                monsterRB.velocity = Vector3.zero;
+                monsterRB.angularVelocity = Vector3.zero;
+
+                listIndex++;
             }
-            foreach (GameObject monsterGOAP in monsterGameobjectsTeamGOAP)
-            {
-                startPositionsTeamGOAP.Add(monsterGOAP.transform.position);
-            }
-            startPositionsInitialized = true;
         }
-
-        //shuffle Positions
-        KnuthShuffle(startPositionsTeamML);
-        KnuthShuffle(startPositionsTeamGOAP);
-
-        //reset Index
-        listIndexTeamML = 0;
-        listIndexTeamGOAP = 0;
     }
-
 
     // knuth shuffle algorithm
-    public List<Vector3> KnuthShuffle(List<Vector3> listToShuffle)
+    public List<Vector3> RandomizePositions(List<Vector3> positionList)
     {
-        for (int t = 0; t < listToShuffle.Count; t++)
+        for (int t = 0; t < positionList.Count; t++)
         {
-            Vector3 tmp = listToShuffle[t];
-            int r = Random.Range(t, listToShuffle.Count);
-            listToShuffle[t] = listToShuffle[r];
-            listToShuffle[r] = tmp;
+            Vector3 tmp = positionList[t];
+            int r = Random.Range(t, positionList.Count);
+            positionList[t] = positionList[r];
+            positionList[r] = tmp;
         }
 
-        return listToShuffle;
+        return positionList;
     }
 
-    public void AssignRandomStartPositionsForMonster(Monster monsterEntity)
+    public void AssignRandomStartPositionForMonster(Monster monsterEntity, List<Vector3> positionList)
     {
         Rigidbody monsterRB = monsterEntity.GetComponent<Rigidbody>();
+        int randomIndex = Random.Range(0, positionList.Count - 1);
+        monsterRB.transform.position = positionList[randomIndex];
+        monsterRB.transform.rotation = new Quaternion(0, 0, 0, 0);
         monsterRB.velocity = Vector3.zero;
         monsterRB.angularVelocity = Vector3.zero;
-        if (monsterEntity.tag == "mlMonster")
-        {
-            int randomIndex = Random.Range(0, startPositionsTeamML.Count - 1);
-            monsterRB.transform.position = startPositionsTeamML[randomIndex];
-            monsterRB.transform.rotation = startRotationTeamML;
-        }
-        else if (monsterEntity.tag == "goapMonster")
-        {
-            int randomIndex = Random.Range(0, startPositionsTeamGOAP.Count - 1);
-            monsterRB.transform.position = startPositionsTeamGOAP[randomIndex];
-            monsterRB.transform.rotation = startRotationTeamGOAP;
-        }
+
+    }
+
+    public void AssignRandomStartPositionForMonsterAnywhere(Monster monsterEntity)
+    {
+        spawnAreaBounds = areaForRandomSpawning.GetComponent<Collider>().bounds;
+
+        //Random Position
+        Vector3 randomSpawnPosition = Vector3.zero;
+        float randomPosX = Random.Range(-spawnAreaBounds.extents.x,
+                                        spawnAreaBounds.extents.x);
+        float randomPosZ = Random.Range(-spawnAreaBounds.extents.z,
+                                        spawnAreaBounds.extents.z);
+
+        randomSpawnPosition = areaForRandomSpawning.transform.position + new Vector3(randomPosX, 0.45f, randomPosZ);
+
+        //Random Rotation
+        Quaternion randomSpawnRotation = new Quaternion(0, 0, 0, 0);
+        float randomRotY = Random.Range(0, 360);
+        randomSpawnRotation = new Quaternion(0, randomRotY, 0, 0);
+
+        //Assign
+        Rigidbody monsterRB = monsterEntity.GetComponent<Rigidbody>();
+        monsterRB.transform.position = randomSpawnPosition;
+        monsterRB.transform.rotation = randomSpawnRotation;
+        monsterRB.velocity = Vector3.zero;
+        monsterRB.angularVelocity = Vector3.zero;
     }
 }

@@ -60,8 +60,7 @@ public class MLMonsterAgent : Agent
 
     public override void AgentReset()
     {
-
-        gameControllerInstance.ResetGame();
+        //gameControllerInstance.ResetGame();
     }
 
     public void Move(float[] act)
