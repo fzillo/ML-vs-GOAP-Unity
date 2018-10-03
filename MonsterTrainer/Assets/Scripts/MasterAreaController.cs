@@ -11,6 +11,7 @@ public class MasterAreaController : MonoBehaviour
     public Bomb bombTeamGOAP;
 
     MonsterTrainerAcademy academy;
+    CurriculumController curriculum;
 
     //TODO remove here?
     TeamController teamMLController;
@@ -18,6 +19,7 @@ public class MasterAreaController : MonoBehaviour
     void Start()
     {
         academy = FindObjectOfType<MonsterTrainerAcademy>();
+        curriculum = FindObjectOfType<CurriculumController>();
 
 
         //we need teamMController for Rewards
@@ -52,6 +54,11 @@ public class MasterAreaController : MonoBehaviour
         List<GameObject> teamMMonsters = teamMLController.teamMonsterList;
         foreach (GameObject mMonsterEntity in teamMMonsters)
         {
+            if (!mMonsterEntity.activeInHierarchy)
+            {
+                continue;
+            }
+
             MLMonsterAgent mlAgent = mMonsterEntity.GetComponentInChildren<MLMonsterAgent>();
             if (mlAgent != null)
             {
@@ -92,6 +99,11 @@ public class MasterAreaController : MonoBehaviour
     {
         if (areaNorth.conqueredByTeamML && areaSouth.conqueredByTeamML)
         {
+            if (curriculum.curriculumActive && curriculum.maximumPhase.Equals((int)CurriculumController.Phase.phaseConquerBothAreas))
+            {
+                academy.Done();
+            }
+
             bombTeamML.ActivateBomb();
         }
         else if (areaNorth.conqueredByTeamGOAP && areaSouth.conqueredByTeamGOAP)

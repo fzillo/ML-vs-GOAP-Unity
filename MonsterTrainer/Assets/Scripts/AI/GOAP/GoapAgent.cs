@@ -118,7 +118,7 @@ public sealed class GoapAgent : MonoBehaviour
             }
 
             // get the agent to move itself
-            Debug.Log("Move to do: " + action.name);
+            //Debug.Log("Move to do: " + action.name);
             if (dataProvider.MoveAgent(action))
             {
                 fsm.popState();

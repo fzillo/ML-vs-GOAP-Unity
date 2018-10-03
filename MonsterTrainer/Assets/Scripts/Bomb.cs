@@ -10,6 +10,9 @@ public class Bomb : MonoBehaviour
     Vector3 startPos;
     MasterAreaController masterAreaControllerInstance;
 
+    MonsterTrainerAcademy academy;
+    CurriculumController curriculum;
+
     float posXToGo;
     float posYToGo;
     float posZToGo;
@@ -23,6 +26,9 @@ public class Bomb : MonoBehaviour
     void Start()
     {
         masterAreaControllerInstance = FindObjectOfType<MasterAreaController>();
+        academy = FindObjectOfType<MonsterTrainerAcademy>();
+        curriculum = FindObjectOfType<CurriculumController>();
+
         bombRB = GetComponent<Rigidbody>();
         startPos = bombRB.transform.position;
         Debug.Log(this.gameObject.tag + "" + startPos);
@@ -61,6 +67,11 @@ public class Bomb : MonoBehaviour
             if (mlAgent != null)
             {
                 mlAgent.RewardAgentForPickingUpBomb();
+            }
+
+            if (curriculum.curriculumActive && curriculum.maximumPhase.Equals((int)CurriculumController.Phase.phasePickupBomb))
+            {
+                academy.Done();
             }
         }
     }

@@ -16,8 +16,6 @@ public class Monster : MonoBehaviour
 
     Rigidbody monsterRB;
 
-
-
     void Start()
     {
         gParameters = FindObjectOfType<GameParameters>();
@@ -41,36 +39,6 @@ public class Monster : MonoBehaviour
             Debug.Log("Deadzone!");
             DieAndRespawn();
         }
-    }
-
-    void FixedUpdate()
-    {
-
-    }
-
-    public void Move(float dirX, float rotY, float dirZ)
-    {
-
-        Vector3 rotateDir = transform.up * rotY;
-        Vector3 dirForward = Vector3.zero;
-        Vector3 dirSideways = Vector3.zero;
-        Vector3 dirToGo = Vector3.zero;
-
-        if (dirZ > 0)
-            dirForward = transform.forward * dirZ * gParameters.monsterAccelerationForward;
-        else if (dirZ < 0)
-            //when moving backwards move slower (value should be lower)
-            dirForward = transform.forward * dirZ * gParameters.monsterAccelerationSidewaysAndBack;
-
-        //when moving sidewards move slower (value should be lower)
-        dirSideways = transform.right * dirX * gParameters.monsterAccelerationSidewaysAndBack;
-        dirToGo = dirForward + dirSideways;
-
-        transform.Rotate(rotateDir, Time.deltaTime * gParameters.monsterRotationSpeed);
-        monsterRB.AddForce(dirToGo,
-        //ForceMode.Impulse //TODO? isn't bad either!
-        ForceMode.VelocityChange
-        );
     }
 
     public void GetDamaged()

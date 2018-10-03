@@ -7,15 +7,25 @@ public class MLMonsterAgent : Agent
 {
     MonsterTrainerAcademy academy;
     MasterAreaController masterAreaControl;
+    GameParameters gParameters;
+    GameController gameControllerInstance;
+
+    Vector3 rotateDir;
+    Vector3 dirToGo;
 
     public Rigidbody monsterRB;
-    private RayPerception rayPer;
     public Monster thisMonster;
+
+    private RayPerception rayPer;
+
 
     public override void InitializeAgent()
     {
+
+        gameControllerInstance = FindObjectOfType<GameController>();
         masterAreaControl = FindObjectOfType<MasterAreaController>();
         academy = FindObjectOfType<MonsterTrainerAcademy>();
+        gParameters = FindObjectOfType<GameParameters>();
         rayPer = GetComponent<RayPerception>();
         monsterRB = GetComponent<Rigidbody>();
 
@@ -51,17 +61,20 @@ public class MLMonsterAgent : Agent
     public override void AgentReset()
     {
 
+        gameControllerInstance.ResetGame();
     }
 
     public void Move(float[] act)
     {
-        int action = Mathf.FloorToInt(act[0]);
+        int forwardAxis = Mathf.FloorToInt(act[0]);
+        int rotateAxis = Mathf.FloorToInt(act[1]);
+        //int rightAxis = Mathf.FloorToInt(act[2]);
 
         float dirX = 0;
         float rotY = 0;
         float dirZ = 0;
 
-        switch (action)
+        switch (forwardAxis)
         {
             case 0:
                 break;
@@ -72,22 +85,66 @@ public class MLMonsterAgent : Agent
             case 2:
                 dirZ = -1f;
                 break;
-            case 3:
+        }
+        switch (rotateAxis)
+        {
+            case 0:
+                break;
+            case 1:
                 rotY = 1f;
                 break;
-            case 4:
+            case 2:
                 rotY = -1f;
                 break;
-            case 5:
+        }
+        /*
+        switch (rightAxis)
+        {
+            case 0:
+                break;
+            case 1:
                 dirX = 1f;
                 break;
-            case 6:
+            case 2:
                 dirX = -1f;
                 break;
         }
-        thisMonster.Move(dirX, rotY, dirZ);
+        */
+
+        SetMoveParameters(dirX, rotY, dirZ);
     }
 
+    public void SetMoveParameters(float dirX, float rotY, float dirZ)
+    {
+
+        rotateDir = transform.up * rotY;
+
+        dirToGo = Vector3.zero;
+        Vector3 dirForward = Vector3.zero;
+        Vector3 dirSideways = Vector3.zero;
+
+        if (dirZ > 0)
+            dirForward = transform.forward * dirZ * gParameters.monsterAccelerationForward;
+        else if (dirZ < 0)
+            //when moving backwards move slower (value should be lower)
+            dirForward = transform.forward * dirZ * gParameters.monsterAccelerationSidewaysAndBack;
+
+        //when moving sidewards move slower (value should be lower)
+        dirSideways = transform.right * dirX * gParameters.monsterAccelerationSidewaysAndBack;
+        dirToGo = dirForward + dirSideways;
+    }
+
+    void FixedUpdate()
+    {
+        if (this.tag == "mlMonster")
+        {
+            transform.Rotate(rotateDir, Time.deltaTime * gParameters.monsterRotationSpeed);
+            monsterRB.AddForce(dirToGo,
+            //ForceMode.Impulse //TODO? isn't bad either!
+            ForceMode.VelocityChange
+            );
+        }
+    }
 
     public void RewardAgentForKnockingEnemy()
     {
