@@ -7,34 +7,45 @@ public class StartPositionGenerator : MonoBehaviour
     public GameObject areaForRandomSpawning;
     Bounds spawnAreaBounds;
 
+    //TODO better determine dynamically
+    float monsterSpawnHeight = 0.45f;
+
     void Start()
     {
+
+        spawnAreaBounds = areaForRandomSpawning.GetComponent<BoxCollider>().bounds;
         areaForRandomSpawning.SetActive(false);
     }
 
-    public List<Vector3> GetStartPositions(List<GameObject> monsterGOList)
+    public List<Vector3> GetStartPositions(List<Monster> monsterList)
     {
         List<Vector3> positionList = new List<Vector3>();
 
-        foreach (GameObject monsterGO in monsterGOList)
+        foreach (Monster monsterEntity in monsterList)
         {
-            positionList.Add(monsterGO.transform.position);
+            positionList.Add(monsterEntity.transform.position);
         }
 
         return positionList;
     }
 
-    public void AssignRandomStartPositionsForAllMonsters(List<GameObject> monsterGOList, List<Vector3> positionList)
+    public void AssignRandomPositionsForMultipleMonstersFromList(List<Monster> monsterList, List<Vector3> positionList)
     {
+        if (monsterList.Count != positionList.Count)
+        {
+            Debug.Log("ERROR - monsterList.Count != positionList.Count");
+            //TODO Throw Exception?
+        }
+
         RandomizePositions(positionList);
 
         int listIndex = 0;
 
-        foreach (GameObject monsterML in monsterGOList)
+        foreach (Monster monsterEntity in monsterList)
         {
             if (listIndex < positionList.Count)
             {
-                Rigidbody monsterRB = monsterML.GetComponent<Rigidbody>();
+                Rigidbody monsterRB = monsterEntity.GetComponent<Rigidbody>();
                 monsterRB.transform.position = positionList[listIndex];
                 monsterRB.transform.rotation = new Quaternion(0, 0, 0, 0);
                 monsterRB.velocity = Vector3.zero;
@@ -43,6 +54,17 @@ public class StartPositionGenerator : MonoBehaviour
                 listIndex++;
             }
         }
+    }
+
+    public void AssignRandomPositionForMonsterFromList(Monster monsterEntity, List<Vector3> positionList)
+    {
+        Rigidbody monsterRB = monsterEntity.GetComponent<Rigidbody>();
+        int randomIndex = Random.Range(0, positionList.Count - 1);
+        monsterRB.transform.position = positionList[randomIndex];
+        monsterRB.transform.rotation = new Quaternion(0, 0, 0, 0);
+        monsterRB.velocity = Vector3.zero;
+        monsterRB.angularVelocity = Vector3.zero;
+
     }
 
     // knuth shuffle algorithm
@@ -59,21 +81,35 @@ public class StartPositionGenerator : MonoBehaviour
         return positionList;
     }
 
-    public void AssignRandomStartPositionForMonster(Monster monsterEntity, List<Vector3> positionList)
+    public void AssignRandomPositionForMultipleMonstersInRandomSpawnZone(List<Monster> monsterList)
     {
-        Rigidbody monsterRB = monsterEntity.GetComponent<Rigidbody>();
-        int randomIndex = Random.Range(0, positionList.Count - 1);
-        monsterRB.transform.position = positionList[randomIndex];
-        monsterRB.transform.rotation = new Quaternion(0, 0, 0, 0);
-        monsterRB.velocity = Vector3.zero;
-        monsterRB.angularVelocity = Vector3.zero;
-
+        foreach (Monster monsterEntity in monsterList)
+        {
+            AssignRandomPositionForMonsterInRandomSpawnZone(monsterEntity);
+        }
     }
 
-    public void AssignRandomStartPositionForMonsterAnywhere(Monster monsterEntity)
+    public void AssignRandomPositionForMonsterInRandomSpawnZone(Monster monsterEntity)
     {
-        spawnAreaBounds = areaForRandomSpawning.GetComponent<Collider>().bounds;
+        //Random Position
+        Vector3 randomSpawnPosition = GeneratePositionInRandomSpawnZone();
 
+        //Random Rotation
+        Quaternion randomSpawnRotation = GenerateRandomRotation();
+
+        //Debug.Log("monsterEntity " + monsterEntity + " randomSpawnPosition " + randomSpawnPosition + " randomSpawnRotation " + randomSpawnRotation);
+
+        //Assign
+        Rigidbody monsterRB = monsterEntity.GetComponent<Rigidbody>();
+        monsterRB.transform.position = randomSpawnPosition;
+        //monsterRB.transform.Rotate(new Vector3(0, randomRotY, 0));
+        monsterRB.transform.rotation = randomSpawnRotation;
+        monsterRB.velocity = Vector3.zero;
+        monsterRB.angularVelocity = Vector3.zero;
+    }
+
+    public Vector3 GeneratePositionInRandomSpawnZone()
+    {
         //Random Position
         Vector3 randomSpawnPosition = Vector3.zero;
         float randomPosX = Random.Range(-spawnAreaBounds.extents.x,
@@ -81,18 +117,16 @@ public class StartPositionGenerator : MonoBehaviour
         float randomPosZ = Random.Range(-spawnAreaBounds.extents.z,
                                         spawnAreaBounds.extents.z);
 
-        randomSpawnPosition = areaForRandomSpawning.transform.position + new Vector3(randomPosX, 0.45f, randomPosZ);
+        //TODO remove magic number!
+        randomSpawnPosition = areaForRandomSpawning.transform.position + new Vector3(randomPosX, monsterSpawnHeight, randomPosZ);
+        return randomSpawnPosition;
+    }
 
-        //Random Rotation
-        Quaternion randomSpawnRotation = new Quaternion(0, 0, 0, 0);
+    public Quaternion GenerateRandomRotation()
+    {
         float randomRotY = Random.Range(0, 360);
-        randomSpawnRotation = new Quaternion(0, randomRotY, 0, 0);
+        Quaternion randomSpawnRotation = Quaternion.Euler(0, randomRotY, 0);
 
-        //Assign
-        Rigidbody monsterRB = monsterEntity.GetComponent<Rigidbody>();
-        monsterRB.transform.position = randomSpawnPosition;
-        monsterRB.transform.rotation = randomSpawnRotation;
-        monsterRB.velocity = Vector3.zero;
-        monsterRB.angularVelocity = Vector3.zero;
+        return randomSpawnRotation;
     }
 }

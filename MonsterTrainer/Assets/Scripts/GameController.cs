@@ -6,15 +6,23 @@ public class GameController : MonoBehaviour
 {
     /*
     TODO LIST    
-    - finish implementing attackenemies-curriculum
-    - bug bombcarrier switches on contact
+    - test AttackEnemyCurriculum
+    - new phase PatrolRandomlySLOW
+    ~ implement shoot again if melee doesnt work (give goap random shoot-delay)
+    - implement attackPhase in AttackEnemyCurriculum with 2ML vs 1GOAP or throw it out
     - calculate goap costs dynamically
+    - balance goap costs
+    - refactor code (eg codestyle C#, Requirement Tags, Hide in Inspector)
+    - refactor projectstructure
+    ~ include ml-agents in git?
+    - documentation in git (pictures/video/gifs)!
+
+    ~ remove sideways sliding on goapAgent
     - bug: sometimes it resets twice after death
     - bug! goap agents slow down together with mlagents 
     ~ bug: when trying to move left+back the monster spins - this seems to be caused by friction with arenabase
     ~ goap attack more persistently
     ~ goap AMonsterAgent MoveAgent() -> should check if preconditions are still true
-    ~ include ml-agents in git?
     ~ Find all Entities in Initialization?
      */
 

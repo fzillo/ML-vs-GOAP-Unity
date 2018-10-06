@@ -14,6 +14,7 @@ public class DefendAreaAction : GoapAction
 
     public DefendAreaAction()
     {
+        addPrecondition("defendAreaActionEnabled", true);
         addPrecondition("bombActive", false);
         addEffect("doJob", true);
         name = "DefendAreaAction";

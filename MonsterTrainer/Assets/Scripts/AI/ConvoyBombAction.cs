@@ -9,6 +9,7 @@ public class ConvoyBombAction : GoapAction
 
     public ConvoyBombAction()
     {
+        addPrecondition("convoyBombActionEnabled", true);
         addPrecondition("bombPickedUp", true);
         addEffect("doJob", true);
         name = "ConvoyBombAction";

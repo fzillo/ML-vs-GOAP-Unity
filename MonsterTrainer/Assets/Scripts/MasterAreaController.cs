@@ -49,15 +49,15 @@ public class MasterAreaController : MonoBehaviour
         Debug.Log("Team GOAP wins the Game!");
         bombTeamGOAP.DetonateBomb();
 
-        List<GameObject> teamMMonsters = teamMLController.teamMonsterList;
-        foreach (GameObject mMonsterEntity in teamMMonsters)
+        List<Monster> teamMMonsters = teamMLController.teamMonsterList;
+        foreach (Monster mMonsterEntity in teamMMonsters)
         {
-            if (!mMonsterEntity.activeInHierarchy)
+            if (!mMonsterEntity.gameObject.activeInHierarchy)
             {
                 continue;
             }
 
-            MLMonsterAgent mlAgent = mMonsterEntity.GetComponentInChildren<MLMonsterAgent>();
+            MLMonsterAgent mlAgent = mMonsterEntity.GetComponent<MLMonsterAgent>();
             if (mlAgent != null)
             {
                 mlAgent.PunishAgentForLosing();
@@ -73,15 +73,15 @@ public class MasterAreaController : MonoBehaviour
         bombTeamML.DetonateBomb();
 
         //TODO reward all?
-        List<GameObject> teamMMonsters = teamMLController.teamMonsterList;
-        foreach (GameObject mMonsterEntity in teamMMonsters)
+        List<Monster> teamMMonsters = teamMLController.teamMonsterList;
+        foreach (Monster mMonsterEntity in teamMMonsters)
         {
-            if (!mMonsterEntity.activeInHierarchy)
+            if (!mMonsterEntity.gameObject.activeInHierarchy)
             {
                 continue;
             }
 
-            MLMonsterAgent mlAgent = mMonsterEntity.GetComponentInChildren<MLMonsterAgent>();
+            MLMonsterAgent mlAgent = mMonsterEntity.GetComponent<MLMonsterAgent>();
             if (mlAgent != null)
             {
                 mlAgent.RewardAgentForWinning();
@@ -95,9 +95,14 @@ public class MasterAreaController : MonoBehaviour
 
     private void activateBombIfBothConqueredByOneTeam()
     {
+        if (academy.attackEnemiesCurriculum)
+        {
+            return;
+        }
+
         if (areaNorth.conqueredByTeamML && areaSouth.conqueredByTeamML)
         {
-            if (academy.curriculumActive && academy.maximumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phaseConquerBothAreas))
+            if (academy.fullfillObjectivesCurriculum && academy.maximumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phaseConquerBothAreas))
             {
                 academy.Done();
             }

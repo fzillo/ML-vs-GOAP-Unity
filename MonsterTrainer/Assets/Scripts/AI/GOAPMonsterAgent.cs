@@ -6,14 +6,21 @@ using UnityEngine.AI;
 public class GOAPMonsterAgent : MonoBehaviour, IGoap
 {
     NavMeshAgent navAgent;
+
+    GOAPActionController goapActionControllerInstance;
     //Vector3 previousDestination;
+
+    [HideInInspector]
+    public List<GameObject> instantiatedWaypoints = new List<GameObject>();
 
     public Bomb teamBomb;
 
     // Use this for initialization
     void Start()
     {
-        navAgent = this.GetComponent<NavMeshAgent>();
+        navAgent = GetComponent<NavMeshAgent>();
+
+        goapActionControllerInstance = FindObjectOfType<GOAPActionController>();
     }
 
     /**
@@ -30,6 +37,22 @@ public class GOAPMonsterAgent : MonoBehaviour, IGoap
         Debug.Log("worldData bombActive " + teamBomb + " hasSpawned " + teamBomb.hasSpawned);
         worldData.Add(new KeyValuePair<string, object>("bombPickedUp", teamBomb.isPickedUp));
         Debug.Log("worldData bombPickedUp " + teamBomb.isPickedUp);
+
+        //Check settings from GOAPActionController
+        worldData.Add(new KeyValuePair<string, object>("attackEnemyActionEnabled", goapActionControllerInstance.attackEnemyActionEnabled));
+        Debug.Log("worldData attackEnemyActionEnabled" + goapActionControllerInstance.attackEnemyActionEnabled);
+        worldData.Add(new KeyValuePair<string, object>("conquerAreaActionEnabled", goapActionControllerInstance.conquerAreaActionEnabled));
+        Debug.Log("worldData conquerAreaActionEnabled" + goapActionControllerInstance.conquerAreaActionEnabled);
+        worldData.Add(new KeyValuePair<string, object>("convoyBombActionEnabled", goapActionControllerInstance.convoyBombActionEnabled));
+        Debug.Log("worldData convoyBombActionEnabled" + goapActionControllerInstance.convoyBombActionEnabled);
+        worldData.Add(new KeyValuePair<string, object>("defendAreaActionEnabled", goapActionControllerInstance.defendAreaActionEnabled));
+        Debug.Log("worldData defendAreaActionEnabled" + goapActionControllerInstance.defendAreaActionEnabled);
+        worldData.Add(new KeyValuePair<string, object>("deliverBombActionEnabled", goapActionControllerInstance.deliverBombActionEnabled));
+        Debug.Log("worldData deliverBombActionEnabled" + goapActionControllerInstance.deliverBombActionEnabled);
+        worldData.Add(new KeyValuePair<string, object>("patrolRandomlyActionEnabled", goapActionControllerInstance.patrolRandomlyActionEnabled));
+        Debug.Log("worldData patrolRandomlyActionEnabled" + goapActionControllerInstance.patrolRandomlyActionEnabled);
+        worldData.Add(new KeyValuePair<string, object>("pickUpBombActionEnabled", goapActionControllerInstance.pickUpBombActionEnabled));
+        Debug.Log("worldData pickUpBombActionEnabled" + goapActionControllerInstance.pickUpBombActionEnabled);
 
         return worldData;
     }
@@ -124,8 +147,14 @@ public class GOAPMonsterAgent : MonoBehaviour, IGoap
         {
             navAgent.ResetPath();
         }
+
+        foreach (GameObject waypoint in instantiatedWaypoints)
+        {
+            Destroy(waypoint);
+        }
+        instantiatedWaypoints = new List<GameObject>();
+
         this.GetComponent<GoapAgent>().CancelPlan();
         Debug.Log("RESET PATH FOR " + this.gameObject);
-
     }
 }

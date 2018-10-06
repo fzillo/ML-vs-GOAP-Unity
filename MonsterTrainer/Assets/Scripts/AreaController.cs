@@ -108,20 +108,20 @@ public class AreaController : MonoBehaviour
             masterAreaControl.NotifyAreaChanged();
 
             //TODO really reward all?
-            List<GameObject> teamMMonsters = teamMLController.teamMonsterList;
-            foreach (GameObject mMonsterEntity in teamMMonsters)
+            List<Monster> teamMMonsters = teamMLController.teamMonsterList;
+            foreach (Monster mMonsterEntity in teamMMonsters)
             {
-                if (!mMonsterEntity.activeInHierarchy)
+                if (!mMonsterEntity.gameObject.activeInHierarchy)
                 {
                     continue;
                 }
 
-                MLMonsterAgent mlAgent = mMonsterEntity.GetComponentInChildren<MLMonsterAgent>();
+                MLMonsterAgent mlAgent = mMonsterEntity.GetComponent<MLMonsterAgent>();
                 if (mlAgent != null)
                     mlAgent.RewardAgentForConqueringArea();
             }
 
-            if (academy.curriculumActive && academy.maximumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phaseConquerOneArea))
+            if (academy.fullfillObjectivesCurriculum && academy.maximumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phaseConquerOneArea))
             {
                 academy.Done();
             }

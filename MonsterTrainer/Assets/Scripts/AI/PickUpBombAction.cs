@@ -13,6 +13,7 @@ public class PickUpBombAction : GoapAction
 
     public PickUpBombAction()
     {
+        addPrecondition("pickUpBombActionEnabled", true);
         addPrecondition("bombActive", true);
         addEffect("doJob", true);
         name = "PickUpBombAction";

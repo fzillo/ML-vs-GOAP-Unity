@@ -5,7 +5,7 @@ using UnityEngine;
 public class TeamController : MonoBehaviour
 {
     public GameObject StartZone;
-    public List<GameObject> teamMonsterList;
+    public List<Monster> teamMonsterList;
 
     List<Vector3> spawnPositionList = new List<Vector3>();
 
@@ -31,18 +31,30 @@ public class TeamController : MonoBehaviour
             spawnPositionList = startPosGen.GetStartPositions(teamMonsterList);
         }
 
-        startPosGen.AssignRandomStartPositionsForAllMonsters(teamMonsterList, spawnPositionList);
+        if (academy == null)
+        {
+            academy = FindObjectOfType<MonsterTrainerAcademy>();
+        }
+
+        if (!academy.attackEnemiesCurriculum)
+        {
+            startPosGen.AssignRandomPositionsForMultipleMonstersFromList(teamMonsterList, spawnPositionList);
+        }
+        else
+        {
+            startPosGen.AssignRandomPositionForMultipleMonstersInRandomSpawnZone(teamMonsterList);
+        }
     }
 
     public void RespawnMonster(Monster monsterEntity)
     {
-        if (!academy.attackEnemyCurriculum)
+        if (!academy.attackEnemiesCurriculum)
         {
-            startPosGen.AssignRandomStartPositionForMonster(monsterEntity, spawnPositionList);
+            startPosGen.AssignRandomPositionForMonsterFromList(monsterEntity, spawnPositionList);
         }
         else
         {
-            startPosGen.AssignRandomStartPositionForMonsterAnywhere(monsterEntity);
+            startPosGen.AssignRandomPositionForMonsterInRandomSpawnZone(monsterEntity);
         }
 
         monsterEntity.Reset();
@@ -50,9 +62,8 @@ public class TeamController : MonoBehaviour
 
     public void ResetAllMonsters()
     {
-        foreach (GameObject monsterGameObject in teamMonsterList)
+        foreach (Monster monsterEntity in teamMonsterList)
         {
-            Monster monsterEntity = monsterGameObject.GetComponent<Monster>();
             Debug.Log("!monsterEntity.deactivatedAtStart " + !monsterEntity.deactivatedAtStart + " monsterEntity " + monsterEntity);
             if (!monsterEntity.deactivatedAtStart)
             {

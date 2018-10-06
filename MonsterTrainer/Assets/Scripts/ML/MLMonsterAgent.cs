@@ -8,7 +8,7 @@ public class MLMonsterAgent : Agent
     MonsterTrainerAcademy academy;
     MasterAreaController masterAreaControl;
     GameParameters gParameters;
-    GameController gameControllerInstance;
+    //GameController gameControllerInstance;
 
     Vector3 rotateDir;
     Vector3 dirToGo;
@@ -22,7 +22,7 @@ public class MLMonsterAgent : Agent
     public override void InitializeAgent()
     {
 
-        gameControllerInstance = FindObjectOfType<GameController>();
+        //gameControllerInstance = FindObjectOfType<GameController>();
         masterAreaControl = FindObjectOfType<MasterAreaController>();
         academy = FindObjectOfType<MonsterTrainerAcademy>();
         gParameters = FindObjectOfType<GameParameters>();
@@ -37,7 +37,6 @@ public class MLMonsterAgent : Agent
         float[] rayAngles2 = { 45f, 90f, 135f };
         float[] rayAngles3 = { 90f };
 
-        //TODO disable DebugRaycasting or use less RayPerceptions for more Performance!
         string[] detectableObjects = { "teamMLBomb", "teamGOAPBomb", "mlMonster", "goapMonster", "mlMonsterHead", "goapMonsterHead" };
         string[] detectableObjects2 = { "deadzone", "areanorth", "areasouth", "teamMLStartZone", "teamGOAPStartZone" };
         AddVectorObs(rayPer.Perceive(35f, rayAngles, detectableObjects, 0f, 0f));
@@ -120,7 +119,7 @@ public class MLMonsterAgent : Agent
 
         dirToGo = Vector3.zero;
         Vector3 dirForward = Vector3.zero;
-        Vector3 dirSideways = Vector3.zero;
+        //Vector3 dirSideways = Vector3.zero;
 
         if (dirZ > 0)
             dirForward = transform.forward * dirZ * gParameters.monsterAccelerationForward;
@@ -129,8 +128,10 @@ public class MLMonsterAgent : Agent
             dirForward = transform.forward * dirZ * gParameters.monsterAccelerationSidewaysAndBack;
 
         //when moving sidewards move slower (value should be lower)
-        dirSideways = transform.right * dirX * gParameters.monsterAccelerationSidewaysAndBack;
-        dirToGo = dirForward + dirSideways;
+        //dirSideways = transform.right * dirX * gParameters.monsterAccelerationSidewaysAndBack;
+        dirToGo = dirForward
+        //+ dirSideways
+        ;
     }
 
     void FixedUpdate()

@@ -13,6 +13,7 @@ public class ConquerAreaAction : GoapAction
 
     public ConquerAreaAction()
     {
+        addPrecondition("conquerAreaActionEnabled", true);
         addPrecondition("isReady", true);
         addPrecondition("bombActive", false);
         addEffect("doJob", true);

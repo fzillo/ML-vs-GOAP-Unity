@@ -50,6 +50,8 @@ public interface IGoap
     /**
 	 * One of the actions caused the plan to abort.
 	 * That action is returned.
+	 *
+	 * FZ THIS GETS CALLED ON PERFORMED WHEN IT RETURNS FALSE
 	 */
     void PlanAborted(GoapAction aborter);
 
@@ -62,7 +64,6 @@ public interface IGoap
     bool MoveAgent(GoapAction nextAction);
 
     //ADDED BY FZ
-    //TODO DEBUGGEN
     void CancelPlan();
 }
 
