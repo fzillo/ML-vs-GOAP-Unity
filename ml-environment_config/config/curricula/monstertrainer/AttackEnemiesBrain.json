@@ -1,0 +1,10 @@
+{
+    "measure" : "reward",
+    "thresholds" : [0.75, 0.75],
+    "min_lesson_length" : 50,
+    "signal_smoothing" : true, 
+    "parameters" : 
+    {
+        "phase_attack_training" : [0, 1, 2]
+    }
+}

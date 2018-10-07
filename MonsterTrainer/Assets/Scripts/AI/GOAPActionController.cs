@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GOAPActionController : MonoBehaviour
 {
@@ -12,14 +13,17 @@ public class GOAPActionController : MonoBehaviour
     public bool patrolRandomlyActionEnabled = false;
     public bool pickUpBombActionEnabled = true;
 
+    float navMeshAgentSpeedInitially = -1f;
+    int maximumattackingGoapAgents = 1;
+
     public void deactivateGoapForMonsters(List<Monster> monsterList)
     {
         foreach (Monster monsterEntity in monsterList)
         {
-            GoapAgent agent = monsterEntity.GetComponent<GoapAgent>();
-            if (agent != null)
+            GoapAgent goapAgent = monsterEntity.GetComponent<GoapAgent>();
+            if (goapAgent != null)
             {
-                agent.enabled = false;
+                goapAgent.enabled = false;
             }
         }
     }
@@ -28,10 +32,10 @@ public class GOAPActionController : MonoBehaviour
     {
         foreach (Monster monsterEntity in monsterList)
         {
-            GoapAgent agent = monsterEntity.GetComponent<GoapAgent>();
-            if (agent != null)
+            GoapAgent goapAgent = monsterEntity.GetComponent<GoapAgent>();
+            if (goapAgent != null)
             {
-                agent.enabled = true;
+                goapAgent.enabled = true;
             }
         }
     }
@@ -41,22 +45,61 @@ public class GOAPActionController : MonoBehaviour
     {
         foreach (Monster monsterEntity in monsterList)
         {
-            GoapAgent agent = monsterEntity.GetComponent<GoapAgent>();
-            if (agent != null)
+            GoapAgent goapAgent = monsterEntity.GetComponent<GoapAgent>();
+            if (goapAgent != null)
             {
-                agent.enabled = false;
+                goapAgent.enabled = false;
             }
         }
     }
 
-    public void setGoapActionsForCurriculumLearningPhaseMovingEnemies(List<Monster> monsterList)
+    public void setGoapActionsForCurriculumLearningPhaseMovingEnemiesHalfSpeed(List<Monster> monsterList)
     {
         foreach (Monster monsterEntity in monsterList)
         {
-            GoapAgent agent = monsterEntity.GetComponent<GoapAgent>();
-            if (agent != null)
+            NavMeshAgent navAgent = monsterEntity.GetComponent<NavMeshAgent>();
+            if (navAgent != null)
             {
-                agent.enabled = true;
+                if (navMeshAgentSpeedInitially == -1f)
+                {
+                    navMeshAgentSpeedInitially = navAgent.speed;
+                }
+                navAgent.speed = navMeshAgentSpeedInitially / 2f;
+            }
+
+            GoapAgent goapAgent = monsterEntity.GetComponent<GoapAgent>();
+            if (goapAgent != null)
+            {
+                goapAgent.enabled = true;
+            }
+            attackEnemyActionEnabled = false;
+            conquerAreaActionEnabled = false;
+            convoyBombActionEnabled = false;
+            defendAreaActionEnabled = false;
+            deliverBombActionEnabled = false;
+            patrolRandomlyActionEnabled = true;
+            pickUpBombActionEnabled = false;
+
+        }
+    }
+
+    public void setGoapActionsForCurriculumLearningPhaseMovingEnemiesFullSpeed(List<Monster> monsterList)
+    {
+        foreach (Monster monsterEntity in monsterList)
+        {
+            NavMeshAgent navAgent = monsterEntity.GetComponent<NavMeshAgent>();
+            if (navAgent != null)
+            {
+                if (navMeshAgentSpeedInitially != -1f)
+                {
+                    navAgent.speed = navMeshAgentSpeedInitially;
+                }
+            }
+
+            GoapAgent goapAgent = monsterEntity.GetComponent<GoapAgent>();
+            if (goapAgent != null)
+            {
+                goapAgent.enabled = true;
             }
             attackEnemyActionEnabled = false;
             conquerAreaActionEnabled = false;
@@ -71,14 +114,22 @@ public class GOAPActionController : MonoBehaviour
 
     public void setGoapActionsForCurriculumLearningPhaseAttackingEnemies(List<Monster> monsterList)
     {
+        int activatedAgents = 0;
         foreach (Monster monsterEntity in monsterList)
         {
-
-            GoapAgent agent = monsterEntity.GetComponent<GoapAgent>();
-            if (agent != null)
+            if (activatedAgents >= maximumattackingGoapAgents)
             {
-                agent.enabled = true;
+                GameObject monsterGO = monsterEntity.gameObject;
+                monsterGO.SetActive(false);
             }
+
+            GoapAgent goapAgent = monsterEntity.GetComponent<GoapAgent>();
+            if (goapAgent != null)
+            {
+                goapAgent.enabled = true;
+                activatedAgents++;
+            }
+
             attackEnemyActionEnabled = true;
             conquerAreaActionEnabled = false;
             convoyBombActionEnabled = false;

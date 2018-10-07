@@ -121,7 +121,7 @@ public class AreaController : MonoBehaviour
                     mlAgent.RewardAgentForConqueringArea();
             }
 
-            if (academy.fullfillObjectivesCurriculum && academy.maximumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phaseConquerOneArea))
+            if (academy.fulfillObjectivesCurriculum && academy.activeCurriculumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phaseConquerOneArea))
             {
                 academy.Done();
             }

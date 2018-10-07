@@ -69,7 +69,7 @@ public class Bomb : MonoBehaviour
                     mlAgent.RewardAgentForPickingUpBomb();
                 }
 
-                if (academy.fullfillObjectivesCurriculum && academy.maximumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phasePickupBomb))
+                if (academy.fulfillObjectivesCurriculum && academy.activeCurriculumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phasePickupBomb))
                 {
                     academy.Done();
                 }

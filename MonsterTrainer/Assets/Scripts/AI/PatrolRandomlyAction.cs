@@ -6,6 +6,7 @@ public class PatrolRandomlyAction : GoapAction
 {
     GOAPMonsterAgent thisGoapMonsterAgent;
     StartPositionGenerator startPosGenerator;
+    GOAPActionController goapActionControllerInstance;
 
     bool completed = false;
     float startTime = 0;
@@ -39,6 +40,15 @@ public class PatrolRandomlyAction : GoapAction
 
     public override bool checkProceduralPrecondition(GameObject agent)
     {
+        if (goapActionControllerInstance == null)
+        {
+            goapActionControllerInstance = FindObjectOfType<GOAPActionController>();
+        }
+        if (!goapActionControllerInstance.patrolRandomlyActionEnabled)
+        {
+            return false;
+        }
+
         waypoint = SpawnRandomWaypoint();
 
         if (thisGoapMonsterAgent == null)

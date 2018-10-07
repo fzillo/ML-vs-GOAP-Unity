@@ -11,24 +11,25 @@ public class MonsterTrainerAcademy : Academy
     TeamController teamMLController;
     TeamController teamGOAPController;
 
-    List<Monster> teamMLMonsterList;
+    //List<Monster> teamMLMonsterList;
     List<Monster> teamGOAPMonsterList;
 
     public Brain brainToTrain;
 
     public bool curriculumActive = false;
+    public bool debugModeWithPlayerBrain = false;
 
     // [HideInInspector]
-    public bool fullfillObjectivesCurriculum = false;
+    public bool fulfillObjectivesCurriculum = false;
     public enum TrainingPhasesFullfillObjectives { phaseConquerOneArea, phaseConquerBothAreas, phasePickupBomb, phaseDeliverBomb };
 
     // [HideInInspector]
     public bool attackEnemiesCurriculum = false;
-    public enum TrainingPhasesAttackEnemies { phaseStaticEnemies, phaseMovingEnemies, phaseAttackingEnemies };
+    public enum TrainingPhasesAttackEnemies { phaseStaticEnemies, phaseMovingEnemiesHalfSpeed, phaseMovingEnemiesFullSpeed, phaseAttackingEnemies };
 
     // [HideInInspector]
-    //TODO rename currentPhase?
-    public int maximumPhase = 0;
+    public int activeCurriculumPhase = 0;
+
     //Dictionary<int, bool> activatedPhasesForGoap = new Dictionary<int, bool>();
     List<int> activatedTrainingPhasesForGoap = new List<int>();
 
@@ -48,6 +49,24 @@ public class MonsterTrainerAcademy : Academy
 
     public override void InitializeAcademy()
     {
+        //TODO refactor!
+        if (curriculumActive && brainToTrain != null && !debugModeWithPlayerBrain)
+        {
+            GameObject fulfillObjectiveBrainGameObject = GameObject.Find("FulfillObjectiveBrain");
+            Brain brainInstanceFulfillObjective = null;
+            if (fulfillObjectiveBrainGameObject != null)
+                brainInstanceFulfillObjective = fulfillObjectiveBrainGameObject.GetComponent<Brain>();
+            if (brainInstanceFulfillObjective != null)
+                brainInstanceFulfillObjective.brainType = BrainType.External;
+
+            GameObject attackEnemiesBrainGameObject = GameObject.Find("AttackEnemiesBrain");
+            Brain brainInstanceAttackEnemies = null;
+            if (attackEnemiesBrainGameObject != null)
+                brainInstanceAttackEnemies = attackEnemiesBrainGameObject.GetComponent<Brain>();
+            if (brainInstanceAttackEnemies != null)
+                brainInstanceAttackEnemies.brainType = BrainType.External;
+        }
+
 
         gameControllerInstance = FindObjectOfType<GameController>();
         Debug.Log("gameControllerInstance" + gameControllerInstance);
@@ -56,9 +75,11 @@ public class MonsterTrainerAcademy : Academy
 
         goapActionControllerInstance = FindObjectOfType<GOAPActionController>();
 
+        /*
         GameObject teamMLControllerGameObject = GameObject.Find("TeamMLController");
         teamMLController = teamMLControllerGameObject.GetComponent<TeamController>();
         teamMLMonsterList = teamMLController.teamMonsterList;
+        */
 
         GameObject teamGOAPControllerGameObject = GameObject.Find("TeamGOAPController");
         teamGOAPController = teamGOAPControllerGameObject.GetComponent<TeamController>();
@@ -66,25 +87,42 @@ public class MonsterTrainerAcademy : Academy
 
         if (curriculumActive)
         {
-            maximumPhase = (int)resetParameters["maximum_phase"];
 
-            Debug.Log("BrainToTrain: " + brainToTrain.name);
-            fullfillObjectivesCurriculum = brainToTrain.name.Equals("FullfillObjectiveBrain");
-            attackEnemiesCurriculum = brainToTrain.name.Equals("AttackEnemiesBrain");
-
-            foreach (Monster monsterEntity in teamMLMonsterList)
+            Debug.Log("BrainToTrain: " + brainToTrain);
+            if (brainToTrain != null)
             {
-                Debug.Log("!monsterEntity.deactivatedAtStart " + !monsterEntity.deactivatedAtStart + " monsterEntity " + monsterEntity);
-                if (!monsterEntity.deactivatedAtStart)
-                {
-                    MLMonsterAgent mlAgent = monsterEntity.GetComponent<MLMonsterAgent>();
-                    mlAgent.brain = brainToTrain;
-                }
+                fulfillObjectivesCurriculum = brainToTrain.name.Equals("FulfillObjectiveBrain");
+                attackEnemiesCurriculum = brainToTrain.name.Equals("AttackEnemiesBrain");
             }
 
+            if (fulfillObjectivesCurriculum)
+            {
+                activeCurriculumPhase = (int)resetParameters["phase_objectives_training"];
+            }
+            else if (attackEnemiesCurriculum)
+            {
+                activeCurriculumPhase = (int)resetParameters["phase_attack_training"];
+            }
+
+            /*
+                        foreach (Monster monsterEntity in teamMLMonsterList)
+                        {
+                            Debug.Log("!monsterEntity.deactivatedAtStart " + !monsterEntity.deactivatedAtStart + " monsterEntity " + monsterEntity);
+                            if (!monsterEntity.deactivatedAtStart)
+                            {
+                                MLMonsterAgent mlAgent = monsterEntity.GetComponent<MLMonsterAgent>();
+                                if (brainToTrain != null)
+                                {
+                                    Debug.Log("mlAgent " + mlAgent + " gets Brain " + brainToTrain);
+                                    mlAgent.GiveBrain(brainToTrain);
+                                }
+                            }
+                        }
+             */
             if (attackEnemiesCurriculum)
             {
-                ActivateAttackEnemiesCurriculumPhase(maximumPhase);
+                ActivateAttackEnemiesCurriculumPhase(activeCurriculumPhase);
+                //TODO make sure all goapagents are active!
             }
         }
 
@@ -96,12 +134,19 @@ public class MonsterTrainerAcademy : Academy
 
         if (curriculumActive)
         {
-            maximumPhase = (int)resetParameters["maximum_phase"];
-
-            if (attackEnemiesCurriculum && !activatedTrainingPhasesForGoap.Contains(maximumPhase))
+            if (fulfillObjectivesCurriculum)
             {
-                ActivateAttackEnemiesCurriculumPhase(maximumPhase);
-                activatedTrainingPhasesForGoap.Add(maximumPhase);
+                activeCurriculumPhase = (int)resetParameters["phase_objectives_training"];
+            }
+            else if (attackEnemiesCurriculum)
+            {
+                activeCurriculumPhase = (int)resetParameters["phase_attack_training"];
+            }
+
+            if (attackEnemiesCurriculum && !activatedTrainingPhasesForGoap.Contains(activeCurriculumPhase))
+            {
+                ActivateAttackEnemiesCurriculumPhase(activeCurriculumPhase);
+                activatedTrainingPhasesForGoap.Add(activeCurriculumPhase);
             }
         }
     }
@@ -125,8 +170,11 @@ public class MonsterTrainerAcademy : Academy
             case (int)MonsterTrainerAcademy.TrainingPhasesAttackEnemies.phaseStaticEnemies:
                 goapActionControllerInstance.setGoapActionsForCurriculumLearningPhaseStaticEnemies(teamGOAPMonsterList);
                 break;
-            case (int)MonsterTrainerAcademy.TrainingPhasesAttackEnemies.phaseMovingEnemies:
-                goapActionControllerInstance.setGoapActionsForCurriculumLearningPhaseMovingEnemies(teamGOAPMonsterList);
+            case (int)MonsterTrainerAcademy.TrainingPhasesAttackEnemies.phaseMovingEnemiesHalfSpeed:
+                goapActionControllerInstance.setGoapActionsForCurriculumLearningPhaseMovingEnemiesHalfSpeed(teamGOAPMonsterList);
+                break;
+            case (int)MonsterTrainerAcademy.TrainingPhasesAttackEnemies.phaseMovingEnemiesFullSpeed:
+                goapActionControllerInstance.setGoapActionsForCurriculumLearningPhaseMovingEnemiesFullSpeed(teamGOAPMonsterList);
                 break;
             case (int)MonsterTrainerAcademy.TrainingPhasesAttackEnemies.phaseAttackingEnemies:
                 goapActionControllerInstance.setGoapActionsForCurriculumLearningPhaseAttackingEnemies(teamGOAPMonsterList);

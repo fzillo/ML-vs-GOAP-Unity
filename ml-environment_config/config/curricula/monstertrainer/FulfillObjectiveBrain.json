@@ -5,6 +5,6 @@
     "signal_smoothing" : true, 
     "parameters" : 
     {
-        "maximum_phase" : [0, 1, 2, 3]
+        "phase_objectives_training" : [0, 1, 2, 3]
     }
 }

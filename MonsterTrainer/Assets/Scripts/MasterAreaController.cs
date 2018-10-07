@@ -102,7 +102,7 @@ public class MasterAreaController : MonoBehaviour
 
         if (areaNorth.conqueredByTeamML && areaSouth.conqueredByTeamML)
         {
-            if (academy.fullfillObjectivesCurriculum && academy.maximumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phaseConquerBothAreas))
+            if (academy.fulfillObjectivesCurriculum && academy.activeCurriculumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phaseConquerBothAreas))
             {
                 academy.Done();
             }

@@ -21,10 +21,15 @@ public class MLMonsterAgent : Agent
 
     public override void InitializeAgent()
     {
+        //TODO refactor
+        academy = FindObjectOfType<MonsterTrainerAcademy>();
+        if (academy.curriculumActive && !academy.debugModeWithPlayerBrain)
+        {
+            GiveBrain(academy.brainToTrain);
+        }
 
         //gameControllerInstance = FindObjectOfType<GameController>();
         masterAreaControl = FindObjectOfType<MasterAreaController>();
-        academy = FindObjectOfType<MonsterTrainerAcademy>();
         gParameters = FindObjectOfType<GameParameters>();
         rayPer = GetComponent<RayPerception>();
         monsterRB = GetComponent<Rigidbody>();

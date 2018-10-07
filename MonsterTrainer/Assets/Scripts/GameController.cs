@@ -5,21 +5,21 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     /*
-    TODO LIST    
-    - test AttackEnemyCurriculum
-    - new phase PatrolRandomlySLOW
-    ~ implement shoot again if melee doesnt work (give goap random shoot-delay)
-    - implement attackPhase in AttackEnemyCurriculum with 2ML vs 1GOAP or throw it out
-    - calculate goap costs dynamically
-    - balance goap costs
+    TODO LIST  
+    - refactor academy!!!
+    - see if objectivestraining still works
+    ~ make mlagents blind of eachother or include them in training
+    - activate attackphase in attacktraining curriculum
     - refactor code (eg codestyle C#, Requirement Tags, Hide in Inspector)
     - refactor projectstructure
+    ~ calculate goap costs dynamically
+    ~ balance goap costs
     ~ include ml-agents in git?
-    - documentation in git (pictures/video/gifs)!
+    - documentation in git (pictures/video/gifs/howto)!
 
     ~ remove sideways sliding on goapAgent
-    - bug: sometimes it resets twice after death
-    - bug! goap agents slow down together with mlagents 
+    - bug: monster sometimes resets twice after death (because of ienumerator)
+    ~ bug! goap agents slow down together with mlagents - still true?
     ~ bug: when trying to move left+back the monster spins - this seems to be caused by friction with arenabase
     ~ goap attack more persistently
     ~ goap AMonsterAgent MoveAgent() -> should check if preconditions are still true

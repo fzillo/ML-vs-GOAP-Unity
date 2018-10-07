@@ -21,7 +21,19 @@ default:
     curiosity_strength: 0.01
     curiosity_enc_size: 128
     
-MonsterBrain:
+FulfillObjectiveBrain:
+    use_curiosity: true
+    summary_freq: 2000
+    curiosity_strength: 0.01
+    curiosity_enc_size: 256
+    time_horizon: 128
+    batch_size: 128
+    buffer_size: 2048
+    hidden_units: 256
+    beta: 1.0e-2
+    max_steps: 2.0e5
+
+AttackEnemiesBrain:
     use_curiosity: true
     summary_freq: 2000
     curiosity_strength: 0.01
