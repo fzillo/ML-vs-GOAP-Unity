@@ -58,20 +58,24 @@ public class Bomb : MonoBehaviour
         {
             if (attachedToGO == null)
             {
-                attachedToGO = col.gameObject;
-                attachedToGO.GetComponentInChildren<Monster>().SetHasBomb(true);
-                isPickedUp = true;
+                Monster attachedToMonster = col.gameObject.GetComponentInChildren<Monster>();
+                if (attachedToMonster != null) { 
 
-                //Rewarding Agent
-                MLMonsterAgent mlAgent = attachedToGO.GetComponentInChildren<MLMonsterAgent>();
-                if (mlAgent != null)
-                {
-                    mlAgent.RewardAgentForPickingUpBomb();
-                }
+                    attachedToGO = col.gameObject;
+                    attachedToMonster.SetHasBomb(true);
+                    isPickedUp = true;
 
-                if (academy.fulfillObjectivesCurriculum && academy.activeCurriculumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phasePickupBomb))
-                {
-                    academy.Done();
+                    //Rewarding Agent
+                    MLMonsterAgent mlAgent = attachedToGO.GetComponentInChildren<MLMonsterAgent>();
+                    if (mlAgent != null)
+                    {
+                        mlAgent.RewardAgentForPickingUpBomb();
+                    }
+
+                    if (academy.fulfillObjectivesCurriculum && academy.activeCurriculumPhase.Equals((int)MonsterTrainerAcademy.TrainingPhasesFullfillObjectives.phasePickupBomb))
+                    {
+                        academy.Done();
+                    }
                 }
             }
         }

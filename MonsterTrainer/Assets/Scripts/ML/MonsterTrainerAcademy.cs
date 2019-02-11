@@ -46,6 +46,7 @@ public class MonsterTrainerAcademy : Academy
     public float punishmentForDying = -0.5f;
     public float punishmentForLosingBomb = -0.2f;
     public float punishmentForLosing = -0.2f;
+    public float punishmentForKnockingProp = -0.1f;
 
     public override void InitializeAcademy()
     {

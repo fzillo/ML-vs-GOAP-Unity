@@ -33,7 +33,10 @@ public class MonsterHead : MonoBehaviour
                 //Rewarding MLAgent
                 this.gameObject.GetComponentInParent<MLMonsterAgent>().RewardAgentForKnockingEnemy();
             }
-
+            else if ((col.gameObject.tag == "mlMonster" || col.gameObject.tag == "mlMonsterHead") && col.gameObject.GetComponentInParent<Prop>() != null)
+            {
+                    this.gameObject.GetComponentInParent<MLMonsterAgent>().PunishAgentForKnockingProp();
+            }
         }
 
         if (this.gameObject.tag == "goapMonsterHead")
@@ -53,7 +56,11 @@ public class MonsterHead : MonoBehaviour
 
     void knockCollidingGameObject(GameObject collidingGameObject, bool takeDamage)
     {
-        Vector3 vect = collidingGameObject.GetComponentInParent<Rigidbody>().transform.position - this.GetComponentInParent<Rigidbody>().transform.position;
-        collidingGameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized, takeDamage);
+        Monster collidingMonster = collidingGameObject.GetComponentInParent<Monster>();
+        if (collidingMonster != null)
+        {
+            Vector3 vect = collidingGameObject.GetComponentInParent<Rigidbody>().transform.position - this.GetComponentInParent<Rigidbody>().transform.position;
+            collidingGameObject.GetComponentInParent<Monster>().GetKnockedBack(vect.normalized, takeDamage);
+        }
     }
 }

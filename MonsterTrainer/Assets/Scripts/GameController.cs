@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
     TODO LIST  
     - refactor academy!!!
     - see if objectivestraining still works
+    - singletons
+    - awake function
     ~ make mlagents blind of eachother or include them in training
     - activate attackphase in attacktraining curriculum
     - refactor code (eg codestyle C#, Requirement Tags, Hide in Inspector)

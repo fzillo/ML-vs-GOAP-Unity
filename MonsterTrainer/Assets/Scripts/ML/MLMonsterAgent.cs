@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using MLAgents;
+using System;
 
 public class MLMonsterAgent : Agent
 {
@@ -42,7 +43,11 @@ public class MLMonsterAgent : Agent
         float[] rayAngles2 = { 45f, 90f, 135f };
         float[] rayAngles3 = { 90f };
 
-        string[] detectableObjects = { "teamMLBomb", "teamGOAPBomb", "mlMonster", "goapMonster", "mlMonsterHead", "goapMonsterHead" };
+        string[] detectableObjects = { "teamMLBomb", "teamGOAPBomb",
+        "mlMonster",
+        "goapMonster",
+        "mlMonsterHead",
+        "goapMonsterHead" };
         string[] detectableObjects2 = { "deadzone", "areanorth", "areasouth", "teamMLStartZone", "teamGOAPStartZone" };
         AddVectorObs(rayPer.Perceive(35f, rayAngles, detectableObjects, 0f, 0f));
         AddVectorObs(rayPer.Perceive(10f, rayAngles2, detectableObjects2, 0f, -1f));
@@ -214,6 +219,12 @@ public class MLMonsterAgent : Agent
     public void RewardAgentForMovingForward()
     {
         AddReward(academy.rewardForMovingForward);
-        Debug.Log("RewardAgentForMovingForward " + academy.rewardForMovingForward + " " + this.gameObject);
+        //Debug.Log("RewardAgentForMovingForward " + academy.rewardForMovingForward + " " + this.gameObject);
+    }
+    
+    public void PunishAgentForKnockingProp()
+    {
+        AddReward(academy.punishmentForKnockingProp);
+        Debug.Log("PunishAgentForKnockingProp " + academy.punishmentForKnockingProp + " " + this.gameObject);
     }
 }
