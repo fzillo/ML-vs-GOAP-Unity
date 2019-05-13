@@ -13,11 +13,11 @@ DISCLAIMER - This project uses two other GitHub Projects:
 ML-Agents from Unity-Technologies in Version v0.5
 https://github.com/Unity-Technologies/ml-agents
 
-Sploregs GOAP Implementation (included in this Project)
+Sploregs GOAP Implementation
 https://github.com/sploreg/goap
 
 Developed in Unity 2018.2.5f1.
 
 How to get it to run?
 
-Download the ML-Agents v0.5 Github Project and copy the Assets/ML-Agents/ folder to Monstertrainer/Assets.
+Download the ML-Agents v0.5 Github Project and copy its Assets/ML-Agents folder to Monstertrainer/Assets.
