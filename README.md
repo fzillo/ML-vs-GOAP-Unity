@@ -1,5 +1,19 @@
 # ML-vs-GOAP-Unity-Demo
 
+This project was created as part of my graduation work. 
+The goal was to create an AI based on Machine Learning Algorithms and compare it to a more traditional approach like Goal-Oriented Action Planning (GOAP).
+
+Reinforcement Learning in the Unity Machine Learning environment was used to train the Agents.
+The GOAP-AI was implemented by using Sploregs GOAP implementation (see link below) and fitting it to my project.
+
+A playing field resembling an arena was chosen to test both AIs against each other.
+The goal of each team is to activate both platforms in the middle at the same time and transport the spawning bomb into the opposing teams base.
+Agents can remove opposing agents from the playing field (for a few seconds) by colliding with their side/back.
+
+The Machine Learning environment was designed to train agents in multiple steps and teach them to reach goals and account for opposing agents.
+
+Below you can see the result:
+
 ![](Doc/unityMLvsGOAPdoc.gif)
 
 **See Learning Process:**
